@@ -1,63 +1,48 @@
 import { NavLink } from 'react-router-dom'
 import * as Icon from 'react-feather'
+import { Link } from 'react-router-dom'
+
 const Navbar = () => {
+  const toggleNav = () => {
+    const hamburgerToggler = document.querySelector('.hamburger')
+    const navLinksContainer = document.querySelector('.navlinks-container')
+
+    hamburgerToggler.classList.toggle('open')
+    const ariaToggle =
+      hamburgerToggler.getAttribute('aria-expanded') === 'true'
+        ? 'false'
+        : 'true'
+    hamburgerToggler.setAttribute('aria-expanded', ariaToggle)
+    navLinksContainer.classList.toggle('open')
+  }
+
   return (
-    <header>
-      <div className='navbar-c'>
-        <div className='firstNav'>
-          <NavLink
-            to='/home'
-            className={({ isActive }) => (isActive ? 'active' : undefined)}
-          >
-            <div></div>
-          </NavLink>
-          <NavLink
-            to='/femme'
-            className={({ isActive }) => (isActive ? 'active' : undefined)}
-          >
-            <div>FEMME</div>
-          </NavLink>
-          <NavLink
-            to='/enfant'
-            className={({ isActive }) => (isActive ? 'active' : undefined)}
-          >
-            <div>ENFANT</div>
-          </NavLink>
-          <NavLink
-            to='/brand'
-            className={({ isActive }) => (isActive ? 'active' : undefined)}
-          >
-            <div>MARQUES</div>
-          </NavLink>
-        </div>
-        <div className='thirdNav'>
-          <NavLink
-            to='/login'
-            className={({ isActive }) => (isActive ? 'active' : undefined)}
-          >
-            <div>
-              <Icon.User size={28} />
-            </div>
-          </NavLink>
-          <NavLink
-            to='/fav'
-            className={({ isActive }) => (isActive ? 'active' : undefined)}
-          >
-            <div>
-              <Icon.Heart size={28} />
-            </div>
-          </NavLink>
-          <NavLink
-            to='/cart'
-            className={({ isActive }) => (isActive ? 'active' : undefined)}
-          >
-            <div>
-              <Icon.ShoppingCart size={28} />
-            </div>
-          </NavLink>
-        </div>
+    <nav className='navbar-c'>
+      <div className='navlinks-container'>
+        <Link
+          aria-expanded='false'
+          onClick={() => toggleNav()}
+          to='/'
+          aria-current='page'
+        >
+          <Icon.Home />
+        </Link>
       </div>
-    </header>
+      <div className='navlink-c'>
+        <Link
+          className='hamburger'
+          aria-label='Toggle navigation'
+          aria-expanded='false'
+          onClick={() => toggleNav()}
+        >
+          <Icon.Menu />
+        </Link>
+
+        <Link to='/portfolio'>PORTFOLIO</Link>
+        <Link to='/about'>À PROPOS</Link>
+        <Link to='/contact'>CONTACT</Link>
+      </div>
+    </nav>
   )
 }
 
