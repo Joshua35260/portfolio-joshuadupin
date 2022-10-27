@@ -1,0 +1,58 @@
+// Écrans APP //
+@use "./screens/Home";
+
+// Composants APP //
+@use './components/Navbar';
+
+
+// font //
+@font-face {
+  font-family: "OpenSans";
+  src: url("./assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
+  }
+
+@font-face {
+    font-family: "MontSerrat";
+    src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf");
+    }
+
+@font-face {
+  font-family:"RobotoSlab";
+  src: url("./assets/fonts/RobotoSlab-VariableFont_wght.ttf");
+  }
+
+// Global ///////////////
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Montserrat','OpenSans','RobotoSlab';
+  
+  a {
+    text-decoration: none;
+    color:white;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  h2 {
+    font-size: .8rem;
+  }
+
+  p,
+  li {
+    font-size: .7rem;
+  }
+
+}
