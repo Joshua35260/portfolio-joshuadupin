@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { motion } from 'framer-motion'
 import AnimatedText from '../components/AnimatedText'
-import homeBackground from '../assets/img/pfpaper1.png'
+import homeBackground from '../assets/img/pfpaper3.jpg'
 import * as Icon from 'react-feather'
 
 const Home = () => {
@@ -19,15 +19,35 @@ const Home = () => {
       text: 'Développeur Web'
     },
     {
-      type: 'h1',
+      type: 'h3',
       text: 'FullStack'
     }
   ]
+  const line1 = 'Joshua Dupin'
+  const line2 = 'Développeur Web'
+  const line3 = 'Fullstack'
 
+  const sentence = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        staggerChildren: 0.08
+      }
+    }
+  }
+
+  const letter = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0
+    }
+  }
   const container = {
     visible: {
       transition: {
-        delay: 2,
         staggerChildren: 0.02
       }
     }
@@ -39,7 +59,7 @@ const Home = () => {
       opacity: 0
     },
     visible: {
-      y: '40vh',
+      y: '30vh',
       opacity: 1,
       transition: {
         spring: 3,
@@ -55,31 +75,61 @@ const Home = () => {
           <img src={homeBackground} alt='' className='home-bg'></img>
           <ContactBar />
           <Navbar />
-
-          <motion.div
-            className='intro'
-            initial='hidden'
-            // animate="visible"
-            animate={replay ? 'visible' : 'hidden'}
-            variants={container}
-          >
-            <div className='intro-c'>
+          <div className='intro-c'>
+            <motion.div
+              className='intro'
+              initial='hidden'
+              animate='visible'
+              variants={sentence}
+            >
               {placeholderText.map((item, index) => {
                 return <AnimatedText {...item} key={index} />
               })}
-            </div>
-          </motion.div>
+            </motion.div>
 
-          <motion.div
-            className='intro'
-            animate={replay ? 'visible' : 'hidden'}
-            initial='hidden'
-            variants={arrowVariant}
-          >
-            <span>
-              <Icon.ChevronsDown color='white' size='128' />
-            </span>
-          </motion.div>
+            <motion.h3
+              className='intro'
+              variants={sentence}
+              initial='hidden'
+              animate='visible'
+            >
+              {line1.split('').map((char, index) => {
+                return (
+                  <motion.span key={char + '-' + index} variants={letter}>
+                    {char}
+                  </motion.span>
+                )
+              })}
+              <br />
+
+              {line2.split('').map((char, index) => {
+                return (
+                  <motion.span key={char + '-' + index} variants={letter}>
+                    {char}
+                  </motion.span>
+                )
+              })}
+              <br />
+              {line3.split('').map((char, index) => {
+                return (
+                  <motion.span key={char + '-' + index} variants={letter}>
+                    {char}
+                  </motion.span>
+                )
+              })}
+            </motion.h3>
+
+            <motion.div
+              className='intro'
+              animate={replay ? 'visible' : 'hidden'}
+              initial='hidden'
+              variants={arrowVariant}
+            >
+              <span>
+                <Icon.ChevronsDown color='white' size='128' />
+              </span>
+            </motion.div>
+          </div>
         </div>
       </div>
 

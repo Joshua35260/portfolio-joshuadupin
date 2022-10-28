@@ -2,7 +2,7 @@
 width:100%;
 display: flex;
 justify-content: center;
-background-color: rgba(255,255,255,0.15);
+background-color: rgba(255, 255, 255, 0.7);
 }
 
 .cbar-c {
@@ -13,8 +13,8 @@ background-color: rgba(255,255,255,0.15);
   align-items: center;
  
   color: white;
-  a {
-    color: white;
+  * {
+    color: rgb(0, 0, 0);
     text-decoration: underline;
     align-items: center;
     justify-content: center;
