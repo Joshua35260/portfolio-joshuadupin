@@ -31,12 +31,15 @@
 ::after,
 ::before {
   box-sizing: border-box;
-
+  
   a {
     text-decoration: none;
   }
 }
-
+html {
+  display: flex;
+  flex-direction: column;
+}
 body {
   font-family: 'Montserrat','OpenSans','RobotoSlab';
   margin: 0;

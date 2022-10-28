@@ -29,21 +29,25 @@ const Home = () => {
   return (
     <>
       <div className='home'>
-        <ContactBar />
-        <Navbar />
-        <motion.div
-          className='intro'
-          initial='hidden'
-          // animate="visible"
-          animate={replay ? 'visible' : 'hidden'}
-          variants={container}
-        >
-          <div className='intro-c'>
-            {placeholderText.map((item, index) => {
-              return <AnimatedText {...item} key={index} />
-            })}
-          </div>
-        </motion.div>
+        <div className='home-bg'>
+          <ContactBar />
+          <Navbar />
+
+          <motion.div
+            className='intro'
+            initial='hidden'
+            // animate="visible"
+            animate={replay ? 'visible' : 'hidden'}
+            variants={container}
+          >
+            <div className='intro-c'>
+              {placeholderText.map((item, index) => {
+                return <AnimatedText {...item} key={index} />
+              })}
+              TEST
+            </div>
+          </motion.div>
+        </div>
       </div>
       <Footer />
     </>
