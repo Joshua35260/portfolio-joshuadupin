@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom'
 import * as Icon from 'react-feather'
 import { Link } from 'react-router-dom'
 
@@ -17,30 +16,31 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='navbar-c'>
-      <div className='navlinks-container'>
-        <Link
-          aria-expanded='false'
-          onClick={() => toggleNav()}
-          to='/'
-          aria-current='page'
-        >
-          <Icon.Home />
-        </Link>
-      </div>
-      <div className='navlink-c'>
-        <Link
+    <nav className='nav-c'>
+      <div className='main-navlinks'>
+        <button
           className='hamburger'
+          type='button'
           aria-label='Toggle navigation'
           aria-expanded='false'
           onClick={() => toggleNav()}
         >
           <Icon.Menu />
-        </Link>
+        </button>
+        <div className='navlinks-container'>
+          <Link
+            aria-expanded='false'
+            onClick={() => toggleNav()}
+            to='/'
+            aria-current='page'
+          >
+            <Icon.Home />
+          </Link>
 
-        <Link to='/portfolio'>PORTFOLIO</Link>
-        <Link to='/about'>À PROPOS</Link>
-        <Link to='/contact'>CONTACT</Link>
+          <Link to='/portfolio'>PORTFOLIO</Link>
+          <Link to='/about'>À PROPOS</Link>
+          <Link to='/contact'>CONTACT</Link>
+        </div>
       </div>
     </nav>
   )

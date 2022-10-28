@@ -1,4 +1,38 @@
 .home {
   height: 100vh;
-  background-color: aqua;
+  background-image: url(../assets/img/pfpaper1.jpg);
+  background-size: 110% 110%;
+  background-position: center center;
+  animation: shrink 7s infinite alternate;
+}
+@keyframes shrink {
+  0% {
+    background-size: 110% 110%;
+  }
+  100% {
+    background-size: 100% 100%;
+}
+}
+
+.intro {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.intro-c {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+ 
+  h1 {
+    font-size: 64px;
+  }
+  h2 {
+    font-size: 32px;
+  }
 }

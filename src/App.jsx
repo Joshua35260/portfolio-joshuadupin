@@ -1,6 +1,5 @@
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Home from './screens/Home'
-import './App.css'
 
 function App() {
   return (
