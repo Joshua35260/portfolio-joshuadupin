@@ -4,19 +4,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(35, 35, 35, 0.7);
+  background-color: rgba(200, 200, 200, 0.7);
 }
 
 .hamburger {
   display: none;
 }
-.navlinks-container a {
+.navlinks-container {
+  * {
+    font-size: 10px;
+  }
+ a {
   display: flex;
   margin: 0 40px;
-  font-size: 24px;
+  font-size: 14px;
   font-weight: bolder;
   text-decoration: none;
-  color: white;
+  color: black;
   display: inline-block;
   position: relative;
 }
@@ -39,7 +43,7 @@
 .navlinks-container a:hover::after {
   transform: scaleX(1);
 }
-
+}
 
 @media (max-width: 900px) {
   .nav-c {

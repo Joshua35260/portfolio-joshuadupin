@@ -2,7 +2,6 @@
 width:100%;
 display: flex;
 justify-content: center;
-background-color: rgba(255, 255, 255, 0.7);
 }
 
 .cbar-c {
@@ -11,10 +10,9 @@ background-color: rgba(255, 255, 255, 0.7);
   height: 40px;
   justify-content: space-evenly;
   align-items: center;
- 
-  color: white;
+
   * {
-    color: rgb(0, 0, 0);
+    color: white;
     text-decoration: underline;
     align-items: center;
     justify-content: center;
