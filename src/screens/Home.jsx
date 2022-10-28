@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { motion } from 'framer-motion'
 import AnimatedText from '../components/AnimatedText'
+import homeBackground from '../assets/img/pfpaper1.jpg'
 
 const Home = () => {
   const [replay, setReplay] = useState(true)
@@ -29,7 +30,8 @@ const Home = () => {
   return (
     <>
       <div className='home'>
-        <div className='home-bg'>
+        <div className='home-background'>
+          <img src={homeBackground} alt='' className='home-bg'></img>
           <ContactBar />
           <Navbar />
 
@@ -44,11 +46,11 @@ const Home = () => {
               {placeholderText.map((item, index) => {
                 return <AnimatedText {...item} key={index} />
               })}
-              TEST
             </div>
           </motion.div>
         </div>
       </div>
+
       <Footer />
     </>
   )
