@@ -9,9 +9,9 @@ const Wrapper = props => {
 
 // Map API "type" vaules to JSX tag names
 const tagMap = {
-  paragraph: 'p',
-  heading1: 'h1',
-  heading2: 'h2'
+  p: 'p',
+  h1: 'h1',
+  h2: 'h2'
 }
 
 // AnimatedCharacters
@@ -21,14 +21,22 @@ const AnimatedCharacters = props => {
   // Framer Motion variant object, for controlling animation
   const item = {
     hidden: {
-      y: '200%',
+      y: '60',
       color: 'rgb(255,255,255)',
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 }
+      transition: {
+        spring: [0.455, 0.03, 0.515, 0.955],
+        duration: 0.85,
+        delay: 0.5
+      }
     },
     visible: {
       y: 0,
       color: 'rgb(255,255,255)',
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 }
+      transition: {
+        spring: [0.455, 0.03, 0.515, 0.955],
+        duration: 0.75,
+        delay: 0.5
+      }
     }
   }
 

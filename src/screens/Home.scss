@@ -7,11 +7,12 @@
     z-index: -1;
     position: absolute;
     object-fit: cover;
+    background-color: rgba(255,255,255,0.15)!important;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    opacity: 40%;
+    opacity: 20%;
     background-size: 120%;
     animation: shrink 12s infinite alternate;
     @keyframes shrink {
@@ -19,12 +20,15 @@
         transform: scale(1);
       }
       100% {
-        transform: scale(1.5);
+        transform: scale(1.2);
     }
     }
 }
 
-
+.sizeArrow {
+  width: 66px;
+height: 66px;
+}
   
 .intro {
   position: relative;
