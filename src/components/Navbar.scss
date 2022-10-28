@@ -16,24 +16,23 @@
   font-size: 24px;
   font-weight: bolder;
   text-decoration: none;
-  color: rgb(116, 38, 38);
+  color: white;
   display: inline-block;
   position: relative;
 }
 
 .navlinks-container a:hover {
-  color: rgb(247, 144, 69);
+  color: var(--orange);
 }
 .navlinks-container a::after {
   content: "";
   display: block;
   position: absolute;
-  bottom: -3px;
+  bottom: -24px;
   width: 100%;
-  height: 1px;
+  height: 2px;
   transform: scaleX(0);
-  transform-origin: left;
-  background: #cdcece;
+  background:  var(--orange);
   transition: transform 0.3s ease-out;
 }
 

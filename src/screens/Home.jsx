@@ -11,7 +11,7 @@ const Home = () => {
   // Placeholder text data, as if from API
 
   const placeholderText = [
-    { type: 'heading2', text: 'Joshua Dupin', size: '40px' },
+    { type: 'heading2', text: 'Joshua Dupin' },
     {
       type: 'heading1',
       text: 'Développeur Web FullStack'
@@ -21,7 +21,7 @@ const Home = () => {
   const container = {
     visible: {
       transition: {
-        staggerChildren: 0.025
+        staggerChildren: 0.05
       }
     }
   }
