@@ -31,14 +31,14 @@
 ::after,
 ::before {
   box-sizing: border-box;
-  
+  user-select: none;
   a {
     text-decoration: none;
   }
 }
 
 body {
-  font-family: 'Montserrat','OpenSans','RobotoSlab';
+  font-family:'RobotoSlab', 'OpenSans', 'Montserrat';
   margin: 0;
   padding: 0;
 }

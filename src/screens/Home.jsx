@@ -15,14 +15,18 @@ const Home = () => {
     { type: 'heading2', text: 'Joshua Dupin' },
     {
       type: 'heading1',
-      text: 'Développeur Web FullStack'
+      text: 'Développeur Web'
+    },
+    {
+      type: 'heading1',
+      text: 'FullStack'
     }
   ]
 
   const container = {
     visible: {
       transition: {
-        staggerChildren: 0.05
+        staggerChildren: 0.03
       }
     }
   }
