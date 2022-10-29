@@ -17,30 +17,28 @@ const Navbar = () => {
 
   return (
     <nav className='nav-c'>
-      <div className='main-navlinks'>
-        <button
-          className='hamburger'
-          type='button'
-          aria-label='Toggle navigation'
+      <button
+        className='hamburger'
+        type='button'
+        aria-label='Toggle navigation'
+        aria-expanded='false'
+        onClick={() => toggleNav()}
+      >
+        <Icon.Menu />
+      </button>
+      <div className='navlinks-container'>
+        <Link
           aria-expanded='false'
           onClick={() => toggleNav()}
+          to='/'
+          aria-current='page'
         >
-          <Icon.Menu />
-        </button>
-        <div className='navlinks-container'>
-          <Link
-            aria-expanded='false'
-            onClick={() => toggleNav()}
-            to='/'
-            aria-current='page'
-          >
-            <Icon.Home size='14' />
-          </Link>
-
-          <Link to='/portfolio'>PORTFOLIO</Link>
-          <Link to='/about'>À PROPOS</Link>
-          <Link to='/contact'>CONTACT</Link>
-        </div>
+          <Icon.Home size='14' />
+        </Link>
+        <Link to='/skills'>Compétences</Link>
+        <Link to='/portfolio'>Portfolio</Link>
+        <Link to='/about'>À propos</Link>
+        <Link to='/contact'>Contact</Link>
       </div>
     </nav>
   )

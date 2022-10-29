@@ -23,7 +23,7 @@
   src: url("./assets/fonts/RobotoSlab-VariableFont_wght.ttf");
   }
 
-:root { --orange: #F15412;
+:root { --orange:#FF4500;
 }
 
 // Global ///////////////
@@ -38,7 +38,7 @@
 }
 
 body {
-  font-family:'RobotoSlab', 'OpenSans', 'Montserrat';
+  font-family:'OpenSans', 'RobotoSlab',  'Montserrat';
   margin: 0;
   padding: 0;
 }
