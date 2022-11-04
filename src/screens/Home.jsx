@@ -65,52 +65,52 @@ const Home = () => {
       <div className='home'>
         <div className='home-background'>
           <img src={homeBackground} alt='' className='home-bg'></img>
-          <ContactBar />
-          <Navbar />
-          <div className='intro-c'>
-            <motion.div
-              className='intro-1'
-              initial='hidden'
-              animate='visible'
-              variants={container}
-            >
-              {line1.split('').map((char, index) => {
-                return (
-                  <motion.span key={char + '-' + index} variants={letter}>
-                    {char}
-                  </motion.span>
-                )
-              })}
-            </motion.div>
+        </div>
+        <ContactBar />
+        <Navbar />
+        <div className='intro-c'>
+          <motion.div
+            className='intro-1'
+            initial='hidden'
+            animate='visible'
+            variants={container}
+          >
+            {line1.split('').map((char, index) => {
+              return (
+                <motion.span key={char + '-' + index} variants={letter}>
+                  {char}
+                </motion.span>
+              )
+            })}
+          </motion.div>
 
-            <motion.div
-              className='intro-2'
-              variants={sentence}
-              initial='hidden'
-              animate='visible'
-            >
-              {line2.split('').map((char, index) => {
-                return (
-                  <motion.span key={char + '-' + index} variants={letter}>
-                    {char}
-                  </motion.span>
-                )
-              })}
-            </motion.div>
+          <motion.div
+            className='intro-2'
+            variants={sentence}
+            initial='hidden'
+            animate='visible'
+          >
+            {line2.split('').map((char, index) => {
+              return (
+                <motion.span key={char + '-' + index} variants={letter}>
+                  {char}
+                </motion.span>
+              )
+            })}
+          </motion.div>
 
-            <motion.div
-              className='intro-3'
-              animate='visible'
-              initial='hidden'
-              variants={arrowVariant}
-            >
-              <span className='arrow'>
-                <Icon.ChevronsDown color='white' size='64' />
-              </span>
-            </motion.div>
+          <motion.div
+            className='intro-3'
+            animate='visible'
+            initial='hidden'
+            variants={arrowVariant}
+          >
+            <span className='arrow'>
+              <Icon.ChevronsDown color='white' size='64' />
+            </span>
+          </motion.div>
 
-            <div className='intro-4'>FULLSTACK</div>
-          </div>
+          <div className='intro-4'>FULLSTACK</div>
         </div>
       </div>
       <Competences />
