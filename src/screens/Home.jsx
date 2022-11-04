@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ContactBar from '../components/ContactBar'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { motion } from 'framer-motion'
+import { motion, useAnimation } from 'framer-motion'
 import homeBackground from '../assets/img/pfpaper11.jpg'
 import * as Icon from 'react-feather'
 
@@ -11,19 +11,37 @@ const Home = () => {
   const line2 = 'DÉVELOPPEUR WEB'
   const line3 = 'FULLSTACK'
 
+  const arrowVariant = {
+    hidden: {
+      y: '30vh',
+      opacity: 0,
+      rotate: 0
+    },
+    visible: {
+      y: '24vh',
+      rotate: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.5,
+        delay: 2.5,
+        type: 'ease',
+        repeatType: 'reverse',
+        repeat: 'Infinity'
+      }
+    }
+  }
   const sentence = {
     hidden: { opacity: 1 },
     visible: {
       opacity: 1,
       transition: {
-        delay: 0.5,
-        staggerChildren: 0.15
+        staggerChildren: 0.1
       }
     }
   }
 
   const letter = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 0 },
     visible: {
       opacity: 1,
       y: 0
@@ -35,33 +53,8 @@ const Home = () => {
     visible: {
       opacity: 1,
       transition: {
-        delay: 0.5
-        // staggerChildren: 0.08
-      }
-    }
-  }
-  const fullstack = {
-    hidden: { opacity: 0, y: -100 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 3
-        // staggerChildren: 0.08
-      }
-    }
-  }
-  const arrowVariant = {
-    hidden: {
-      y: '-5vh',
-      opacity: 0
-    },
-    visible: {
-      y: '16vh',
-      opacity: 1,
-      transition: {
-        duration: 1,
-        delay: 3.5
+        delay: 0.5,
+        duration: 0.5
       }
     }
   }
@@ -103,30 +96,19 @@ const Home = () => {
                 )
               })}
             </motion.div>
+
             <motion.div
               className='intro-3'
-              variants={sentence}
-              initial='hidden'
-              animate='visible'
-            >
-              {line3.split('').map((char, index) => {
-                return (
-                  <motion.span key={char + '-' + index} variants={fullstack}>
-                    {char}
-                  </motion.span>
-                )
-              })}
-            </motion.div>
-            <motion.div
-              className='intro-4'
               animate='visible'
               initial='hidden'
               variants={arrowVariant}
             >
-              <span>
+              <span className='arrow'>
                 <Icon.ChevronsDown color='white' size='64' />
               </span>
             </motion.div>
+
+            <div className='intro-4'>FULLSTACK</div>
           </div>
         </div>
       </div>
