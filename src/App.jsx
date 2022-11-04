@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import Services from './components/Competences'
+import Services from './components/Knowledges'
 import Home from './screens/Home'
 
 function App() {

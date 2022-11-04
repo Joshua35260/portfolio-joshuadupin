@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 import { motion, useAnimation } from 'framer-motion'
 import homeBackground from '../assets/img/pfpaper11.jpg'
 import * as Icon from 'react-feather'
-import Competences from '../components/Competences'
+import Competences from '../components/Knowledges'
 
 const Home = () => {
   const line1 = 'Joshua DUPIN'

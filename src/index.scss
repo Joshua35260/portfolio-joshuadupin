@@ -1,11 +1,11 @@
 // Écrans APP //
-@use "./screens/Home";
+@use "./assets/styles/Home.scss";
 
 // Composants APP //
-@use './components/ContactBar';
-@use './components/Navbar';
-@use './components/Footer';
-@use './components/Competences';
+@use './assets/styles/ContactBar';
+@use './assets/styles/Navbar';
+@use './assets/styles/Footer';
+@use './assets/styles/Knowledges';
 
 // font //
 @font-face {
