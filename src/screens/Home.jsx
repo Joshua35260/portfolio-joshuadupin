@@ -1,30 +1,29 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import ContactBar from '../components/ContactBar'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { motion, useAnimation } from 'framer-motion'
+import { motion } from 'framer-motion'
 import homeBackground from '../assets/img/pfpaper11.jpg'
 import * as Icon from 'react-feather'
-import Competences from '../components/Knowledges'
+import Skills from '../components/Skills'
 
 const Home = () => {
   const line1 = 'Joshua DUPIN'
   const line2 = 'DÉVELOPPEUR WEB'
-  const line3 = 'FULLSTACK'
 
   const arrowVariant = {
     hidden: {
-      y: '30vh',
+      y: '10%',
       opacity: 0,
       rotate: 0
     },
     visible: {
-      y: '24vh',
+      y: '0',
       rotate: 0,
       opacity: 1,
       transition: {
         duration: 1.5,
-        delay: 2.5,
+        delay: 4,
         type: 'ease',
         repeatType: 'reverse',
         repeat: 'Infinity'
@@ -36,16 +35,17 @@ const Home = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
+        staggerChildren: 0.15
       }
     }
   }
 
   const letter = {
-    hidden: { opacity: 0, y: 0 },
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
-      y: 0
+      y: 0,
+      type: 'spring'
     }
   }
 
@@ -55,7 +55,7 @@ const Home = () => {
       opacity: 1,
       transition: {
         delay: 0.5,
-        duration: 0.5
+        duration: 1
       }
     }
   }
@@ -99,8 +99,9 @@ const Home = () => {
             })}
           </motion.div>
 
+          <div className='intro-3'>FULLSTACK</div>
           <motion.div
-            className='intro-3'
+            className='intro-4'
             animate='visible'
             initial='hidden'
             variants={arrowVariant}
@@ -109,11 +110,9 @@ const Home = () => {
               <Icon.ChevronsDown color='white' size='64' />
             </span>
           </motion.div>
-
-          <div className='intro-4'>FULLSTACK</div>
         </div>
       </div>
-      <Competences />
+      <Skills />
       <Footer />
     </>
   )
