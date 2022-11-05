@@ -1,83 +1,76 @@
-import React, { Component } from 'react'
+import { useAnimation, motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { useInView } from 'react-intersection-observer'
 import ProgressBar from './ProgressBar'
-class Languages extends Component {
-  state = {
-    languages: [
-      { id: 1, value: 'Javascript', xp: 1 },
-      { id: 2, value: 'CSS', xp: 1.5 },
-      { id: 3, value: 'HTML', xp: 1.5 },
-      { id: 4, value: 'WordPress', xp: 0.5 }
-    ],
-    frameworks: [
-      { id: 1, value: 'React', xp: 1 },
-      { id: 2, value: 'Node', xp: 1 },
-      { id: 3, value: 'Express', xp: 1 },
-      { id: 4, value: 'Sass', xp: 0.6 },
-      { id: 5, value: 'Material UI', xp: 0.6 },
-      { id: 6, value: 'Styled components', xp: 0.3 }
-    ]
-  }
-  render() {
-    let { languages, frameworks } = this.state
 
-    return (
-      <div className='languagesFrameworks'>
-        <div className='in-lf'>
-          <ProgressBar
-            languages={languages}
-            className='languagesDisplay'
-            title='languages'
-          />
-          <ProgressBar
-            languages={frameworks}
-            title='frameworks & bibliothèques'
-            className='frameworksDisplay'
-          />
-        </div>
-        <div className='otherSkills'>
-          <h3>Autres compétences</h3>
-          <div className='list'>
-            <ul>
-              <li>
-                <i className='fas fa-check-square'></i>
-                Anglais courant
-              </li>
-              <li>
-                <i className='fas fa-check-square'></i>
-                Git/GitHub
-              </li>
-              <li>
-                <i className='fas fa-check-square'></i>
-                MySQL
-              </li>
-              <li>
-                <i className='fas fa-check-square'></i>
-                Méthodes agiles
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <i className='fas fa-check-square'></i>
-                SEO
-              </li>
-              <li>
-                <i className='fas fa-check-square'></i>
-                Figma
-              </li>
-              <li>
-                <i className='fas fa-check-square'></i>
-                GSAP
-              </li>
-              <li>
-                <i className='fas fa-check-square'></i>
-                Design
-              </li>
-            </ul>
-          </div>
+const testData = [
+  { bgColor: 'green', completed: 70, content: 'React' },
+  { bgColor: 'green', completed: 40, content: 'Javascript' },
+  { bgColor: 'green', completed: 50, content: 'Node.JS' },
+  { bgColor: 'green', completed: 50, content: 'Express' }
+]
+
+const Languages = () => {
+  const [completed, setCompleted] = useState(0)
+
+  useEffect(() => {
+    setInterval(() => setCompleted(Math.floor(Math.random() * 100) + 1), 2000)
+  }, [])
+  return (
+    <div className='languagesFrameworks'>
+      {testData.map((item, idx) => (
+        <ProgressBar
+          key={idx}
+          bgColor={item.bgColor}
+          completed={item.completed}
+          content={item.content}
+          className='progressBar-animation'
+        />
+      ))}
+
+      <div className='otherSkills'>
+        <h3>Autres compétences</h3>
+        <div className='list'>
+          <ul>
+            <li>
+              <i className='fas fa-check-square'></i>
+              Git/GitHub
+            </li>
+            <li>
+              <i className='fas fa-check-square'></i>
+              MySQL
+            </li>
+            <li>
+              <i className='fas fa-check-square'></i>
+              Méthodes agiles
+            </li>
+            <li>
+              <i className='fas fa-check-square'></i>
+              SEO
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <i className='fas fa-check-square'></i>
+              Figma
+            </li>
+            <li>
+              <i className='fas fa-check-square'></i>
+              Framer Motion
+            </li>
+            <li>
+              <i className='fas fa-check-square'></i>
+              Material UI
+            </li>
+            <li>
+              <i className='fas fa-check-square'></i>
+              Styled components
+            </li>
+          </ul>
         </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default Languages
