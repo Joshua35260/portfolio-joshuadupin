@@ -1,4 +1,5 @@
 import React from 'react'
+import * as Icon from 'react-feather'
 
 const OtherSkills = () => {
   return (
@@ -7,41 +8,39 @@ const OtherSkills = () => {
       <div className='list'>
         <ul>
           <li>
-            <i className='fas fa-check-square'></i>
+            <i><Icon.CheckSquare color='green' size='24' /></i>
             Git/GitHub
           </li>
           <li>
-            <i className='fas fa-check-square'></i>
+            <i><Icon.CheckSquare color='green' size='24' /></i>
             MySQL
           </li>
           <li>
-            <i className='fas fa-check-square'></i>
+            <i><Icon.CheckSquare color='green' size='24' /></i>
             Méthodes agiles
           </li>
           <li>
-            <i className='fas fa-check-square'></i>
+            <i><Icon.CheckSquare color='green' size='24' /></i>
             SEO
           </li>
-        </ul>
-        <ul>
           <li>
-            <i className='fas fa-check-square'></i>
+            <i><Icon.CheckSquare color='green' size='24' /></i>
             Figma
           </li>
           <li>
-            <i className='fas fa-check-square'></i>
+            <i><Icon.CheckSquare color='green' size='24' /></i>
             Sass
           </li>
           <li>
-            <i className='fas fa-check-square'></i>
+            <i><Icon.CheckSquare color='green' size='24' /></i>
             Framer Motion
           </li>
           <li>
-            <i className='fas fa-check-square'></i>
+            <i><Icon.CheckSquare color='green' size='24' /></i>
             Styled components
           </li>
           <li>
-            <i className='fas fa-check-square'></i>
+            <i><Icon.CheckSquare color='green' size='24' /></i>
             Material UI
           </li>
         </ul>

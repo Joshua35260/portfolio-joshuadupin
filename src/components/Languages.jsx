@@ -5,7 +5,10 @@ class Languages extends Component {
     languages: [
       { id: 1, value: 'Javascript', xp: 1.2 },
       { id: 2, value: 'CSS', xp: 1.5 },
-      { id: 3, value: 'HTML', xp: 1.5 }
+      { id: 3, value: 'HTML', xp: 1.5 },
+      { id: 4, value: 'React', xp: 1 },
+      { id: 5, value: 'Node.js', xp: 0.8 },
+      { id: 6, value: 'Express', xp: 0.8 }
     ],
     frameworks: [
       { id: 1, value: 'React', xp: 1 },
@@ -21,13 +24,13 @@ class Languages extends Component {
         <ProgressBar
           languages={languages}
           className='languagesDisplay'
-          title='languages'
+          title='Languages, frameworks & bibliothèques'
         />
-        <ProgressBar
+        {/* <ProgressBar
           languages={frameworks}
           title='frameworks & bibliothèques'
           className='frameworksDisplay'
-        />
+        /> */}
       </div>
     )
   }

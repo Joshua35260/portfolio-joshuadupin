@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 import homeBackground from '../assets/img/pfpaper11.jpg'
 import * as Icon from 'react-feather'
 import Skills from '../components/Skills'
+import ProjectList from '../components/ProjectList'
 
 const Home = () => {
   const line1 = 'Joshua DUPIN'
@@ -115,6 +116,7 @@ const Home = () => {
           </div>
         </div>
         <Skills />
+        
         <Footer />
       </ScrollAnimation>
     </>

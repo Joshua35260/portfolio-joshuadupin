@@ -1,0 +1,56 @@
+// BASE //
+@import "./base/responsive.scss";
+@import './base/mixins.scss';
+
+// Écrans APP //
+@import "./screens/Home.scss";
+
+// Composants APP //
+@import './components/Navbar.scss';
+@import './components/ContactBar.scss';
+@import './components/Skills.scss';
+@import './components/Footer.scss';
+@import './components/Project.scss';
+
+
+// font //
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-VariableFont_wdth\,wght.ttf");
+  }
+
+@font-face {
+    font-family: "MontSerrat";
+    src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+    }
+
+@font-face {
+  font-family:"RobotoSlab";
+  src: url("../fonts/RobotoSlab-VariableFont_wght.ttf");
+  }
+
+:root { --orange:#FF4500;
+        --black: #2e2e2e;
+}
+
+// Global ///////////////
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  user-select: none;
+  list-style: none;
+  a {
+    text-decoration: none;
+  }
+}
+
+body {
+  font-family:'OpenSans', 'RobotoSlab',  'Montserrat';
+  margin: 0;
+  padding: 0;
+}
+  button {
+    cursor: pointer;
+  }
+
