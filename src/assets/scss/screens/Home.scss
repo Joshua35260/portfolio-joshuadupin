@@ -1,28 +1,21 @@
 .home {
   height: 100vh;
-  max-width: 100%;
 
   .home-background {
-    z-index: -2;
-    // display: flex;
+    z-index: -1;
+    display: flex;
     height: 100vh;
     width: 100%;
     position: absolute;
     overflow: hidden;
 
-
-
     .home-bg {
+      position: relative;
       filter: brightness(60%);
       opacity: 100%;
-      z-index: -1;
-      height: 100%;
-      width: 100vw;
-      animation: shrink 14s infinite alternate;
+      width: 100%;
+      animation: shrink 12s infinite alternate;
       object-fit: cover;
-
-
-
 
       @keyframes shrink {
         0% {
@@ -36,12 +29,15 @@
     }
   }
 
+
   .intro-c {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
     align-items: center;
+   
+    text-align: center;
     filter: none;
     font-family: 'Montserrat';
 
@@ -55,6 +51,9 @@
       font-family: 'RobotoSlab';
       font-weight: lighter;
       color: rgb(255, 255, 255);
+      @include mobiletablet {
+        font-size: 24px;
+      }
 
       :nth-child(6) {
         margin-right: 8px;
@@ -67,10 +66,12 @@
       width: 100%;
       top: 16vh;
       justify-content: center;
-      font-size: 48px;
+      font-size: 3rem;
       font-weight: 900;
       color: white;
-
+      @include mobiletablet {
+        font-size: 24px;
+      }
       :nth-child(11) {
         margin-right: 8px;
       }
@@ -79,19 +80,22 @@
     .intro-3 {
       display: flex;
       position: relative;
-      margin-top: 144px;
+      top: 180px;
       color: white;
       font-weight: 900;
-      font-size: 48px;
-      font-family: 'Montserrat';
+      font-size: 3rem;
       animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 3s both;
+      @include mobiletablet {
+        top: 16%;
+        font-size: 32px;
+      }
     }
 
     .intro-4 {
       position: relative;
       display: flex;
       width: 100%;
-      top: 16vh;
+      top: 50vh;
       justify-content: center;
       color: white;
       font-size: 48px;

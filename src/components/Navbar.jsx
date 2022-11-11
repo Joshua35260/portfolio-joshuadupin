@@ -33,7 +33,7 @@ const Navbar = () => {
           to='/'
           aria-current='page'
         >
-          <Icon.Home size='14' />
+          <Icon.Home size='16' />
         </Link>
         <Link to='/skills'>Compétences</Link>
         <Link to='/portfolio'>Portfolio</Link>

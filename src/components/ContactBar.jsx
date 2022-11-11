@@ -7,20 +7,18 @@ const ContactBar = () => {
     <nav className='contact-bar'>
       <div className='cbar-c'>
         <div className='cbar-1'>
-          <Icon.Linkedin size='14' />
-          <Icon.GitHub size='14' />
-          <Icon.Instagram size='14' />
-          <Icon.Facebook size='14' />
+          <Icon.Linkedin size='16' />
+          <Icon.GitHub size='16' />
+          <Icon.Instagram size='16' />
+          <Icon.Facebook size='16' />
         </div>
         <div className='cbar-2'></div>
         <a href={CV} download onClick={CV}>
           Télécharger mon CV
         </a>
         <div className='c-bar3'>
-          <Icon.Phone size='11' />
-          (+33)6.99.64.89.06
           <a href='mailto:joshua35260@gmail.com'>
-            <Icon.Mail size='11' />
+            <Icon.Mail size='16' />
             joshua35260@gmail.com
           </a>
         </div>

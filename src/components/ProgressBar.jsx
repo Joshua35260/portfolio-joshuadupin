@@ -1,5 +1,5 @@
 import React from 'react'
-
+import ScrollAnimation from 'react-animate-on-scroll'
 const ProgressBar = props => {
   return (
     <div className={props.ClassName}>
@@ -16,8 +16,10 @@ const ProgressBar = props => {
           let progressBar = (item.xp / xpYears) * 100 + '%'
           return (
             <div key={item.id} className='languagesList'>
+              <ScrollAnimation animateIn='fadeInDownBig'>
               <li>{item.value} </li>
               <div className='progressBar' style={{ width: progressBar }}></div>
+              </ScrollAnimation>
             </div>
           )
         })}
