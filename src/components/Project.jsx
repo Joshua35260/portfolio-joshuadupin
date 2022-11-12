@@ -17,7 +17,7 @@ export default class Project extends Component {
         <div className="icons">
           {languagesIcons.map((icon) => (
             <i className={icon} key={icon}></i>
-          ))}
+          ))} 
         </div>
         <h3>{name}</h3>
         <img
@@ -25,9 +25,7 @@ export default class Project extends Component {
           alt={name}
           onClick={this.handleInfo}
         />
-        <span className="infos" onClick={this.handleInfo}>
-          <i className="fas fa-plus-circle"></i>
-        </span>
+       
         {this.state.showInfo && (
           <div className="showInfos">
             <div className="infosContent">

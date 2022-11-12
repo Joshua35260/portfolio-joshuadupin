@@ -14,7 +14,7 @@ const Home = () => {
 
   const arrowVariant = {
     hidden: {
-      y: '10%',
+      y: '60px',
       opacity: 0,
       rotate: 0
     },
