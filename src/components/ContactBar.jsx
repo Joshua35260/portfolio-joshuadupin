@@ -18,7 +18,7 @@ const ContactBar = () => {
         </a>
         <div className='c-bar3'>
           <a href='mailto:joshua35260@gmail.com'>
-            <Icon.Mail size='20' />
+            <Icon.Mail size='14' className='mailIcon' />
             joshua35260@gmail.com
           </a>
         </div>

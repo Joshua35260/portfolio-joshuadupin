@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { portfolioData } from "../assets/data/portfolioData"
-import Project from "./Project";
+import { Component } from 'react'
+import { portfolioData } from '../assets/data/portfolioData'
+import Card from './ProjectCard'
 
 export default class ProjectList extends Component {
   state = {
@@ -21,6 +21,7 @@ export default class ProjectList extends Component {
 
   render() {
     let { projects, radios, selectedRadio } = this.state;
+  
 
     return (
       <div className="portfolioContent">
@@ -46,9 +47,9 @@ export default class ProjectList extends Component {
 
         <div className="projects">
           {projects
-            .filter((item) => item.languages.includes(selectedRadio))
-            .map((item) => {
-              return <Project key={item.id} item={item} />;
+            .filter((project) => project.languages.includes(selectedRadio))
+            .map((project) => {
+              return <Card key={project.id} item={project} />;
             })}
         </div>
       </div>
