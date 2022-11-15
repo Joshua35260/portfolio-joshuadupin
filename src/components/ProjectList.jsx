@@ -5,54 +5,55 @@ import Card from './ProjectCard'
 export default class ProjectList extends Component {
   state = {
     projects: portfolioData,
-    radios: [
-      { id: 1, value: "javascript" },
-      { id: 2, value: "css" },
-      { id: 3, value: "react" },
-      { id: 4, value: "express" },
+    buttons: [
+      { id: 1, value: 'Tous', className: 'btnActive' },
+      { id: 2, value: 'React' },
+      { id: 3, value: 'Node.JS' },
+      { id: 4, value: 'Javascript' },
+      { id: 5, value: 'PHP' },
+      { id: 6, value: 'C#' }
     ],
-    selectedRadio: "javascript",
-  };
+     selectedButton: 'Tous'
+  }
 
-  handleRadio = (event) => {
-    let radio = event.target.value;
-    this.setState({ selectedRadio: radio });
-  };
+  handleButton = event => {
+    let button = event.target.value
+    this.setState({ selectedButton: button, })
+
+  }
 
   render() {
-    let { projects, radios, selectedRadio } = this.state;
-  
-
+    let { projects, buttons, selectedButton } = this.state
+    
     return (
-      <div className="portfolioContent">
+      <div className='portfolioContent'>
         <h1>MES RÉALISATIONS</h1>
         <h2>Une partie des projets sur lesquels j'ai travaillé</h2>
-        <ul className="radioDisplay">
-          {radios.map((radio) => {
+        <div className='buttonDisplay'>
+          {buttons.map(button => {
             return (
-              <li key={radio.id}>
+              <li key={button.id}>
                 <input
-                  type="radio"
-                  name="radio"
-                  checked={radio.value === selectedRadio}
-                  value={radio.value}
-                  id={radio.value}
-                  onChange={this.handleRadio}
+                  type='button'
+                  className='buttonProject'
+                  value={button.value}
+                  id={button.id}
+                  onClick={this.handleButton}
                 />
-                <label htmlFor={radio.value}>{radio.value}</label>
               </li>
-            );
+            )
           })}
-        </ul>
+        </div>
 
-        <div className="projects">
+        <div className='projects'>
           {projects
-            .filter((project) => project.languages.includes(selectedRadio))
-            .map((project) => {
-              return <Card key={project.id} item={project} />;
+            .filter(project => project.languages.includes(selectedButton))
+            .map(project => {
+              return <Card key={project.id} item={project} />
             })}
         </div>
       </div>
-    );
+    )
   }
 }
+

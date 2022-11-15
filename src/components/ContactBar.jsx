@@ -16,7 +16,7 @@ const ContactBar = () => {
         <a href={CV} download onClick={CV}>
           Télécharger mon CV
         </a>
-        <div className='c-bar3'>
+        <div className='cbar-3'>
           <a href='mailto:joshua35260@gmail.com'>
             <Icon.Mail size='14' className='mailIcon' />
             joshua35260@gmail.com
