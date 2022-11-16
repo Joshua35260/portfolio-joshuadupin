@@ -9,8 +9,8 @@ const Skills = () => {
     <>
       <div className='skills'>
         <img src={map} alt='map monde' className='map'></img>
-        <h1 className='skills--h1'>MES COMPÉTENCES</h1>
-        <div className='skills--in'>
+        <h1 className='skills-h1'>MES COMPÉTENCES</h1>
+        <div className='skills-in'>
           <Languages />
           <OtherSkills />
         </div>

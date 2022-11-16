@@ -28,6 +28,14 @@ const OtherSkills = () => {
               <i>
                 <Icon.CheckSquare color='green' size='24' />
               </i>
+              WordPress
+            </li>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn='fadeInDownBig'>
+            <li>
+              <i>
+                <Icon.CheckSquare color='green' size='24' />
+              </i>
               Méthodes agiles
             </li>
           </ScrollAnimation>

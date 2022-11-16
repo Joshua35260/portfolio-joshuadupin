@@ -1,7 +1,7 @@
 import { Route, Routes, Link, NavLink, Outlet } from 'react-router-dom'
 import Home from './screens/Home'
 import Skills from './components/Skills'
-import ProjectListclass from './components/ProjectListclass'
+import ProjectList from './components/ProjectList'
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
 
         <Route path='/' element={<Home />} />
         <Route path='/skills' element={<Skills />} />
-        <Route path='/projects' element={<ProjectListclass />} />
+        <Route path='/projects' element={<ProjectList />} />
       </Routes>
     </>
   )
