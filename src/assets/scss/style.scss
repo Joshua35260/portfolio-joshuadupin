@@ -12,6 +12,7 @@
 @import './components/Footer.scss';
 @import './components/ProjectList.scss';
 @import './components/ProjectCard.scss';
+@import './components/About.scss';
 @import './components/Contact.scss';
 @import './components/Leaflet.scss';
 
@@ -34,7 +35,8 @@
   }
 
 :root { --orange:#FF4500;
-        --black: #2e2e2e;
+       
+        
 }
 
 // Global ///////////////
@@ -50,7 +52,9 @@
   a {
     text-decoration: none;
   }
- 
+ .active {
+  color:red;
+ }
 }
 h1,h2,h3,h4 {
   margin: 0;

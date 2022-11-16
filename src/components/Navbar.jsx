@@ -1,52 +1,60 @@
 import * as Icon from 'react-feather'
-import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 
 const Navbar = () => {
-  const [scroll, setScroll] = useState(false);
+  const [scroll, setScroll] = useState('relative')
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 0);
-    });
-  }, []);
-
-  const toggleNav = () => {
-    const hamburgerToggler = document.querySelector('.hamburger')
-    const navLinksContainer = document.querySelector('.navlinks-container')
-
-    hamburgerToggler.classList.toggle('open')
-    const ariaToggle =
-      hamburgerToggler.getAttribute('aria-expanded') === 'true'
-        ? 'false'
-        : 'true'
-    hamburgerToggler.setAttribute('aria-expanded', ariaToggle)
-    navLinksContainer.classList.toggle('open')
-  }
+    window.addEventListener('scroll', () => {
+      setScroll(window.scrollY < 100)
+    })
+  }, [])
 
   return (
-    <nav className={scroll ? "nav-c" : "nav-c sticky"}>
-      <button
-        className='hamburger'
-        type='button'
-        aria-label='Toggle navigation'
-        aria-expanded='false'
-        onClick={() => toggleNav()}
+    <nav className={scroll ? 'nav-c' : 'nav-c sticky'}>
+      <div
+        className={scroll ? 'navlinks-container' : 'navlinks-container sticky'}
       >
-        <Icon.Menu />
-      </button>
-      <div className='navlinks-container'>
-        <Link
-          aria-expanded='false'
-          onClick={() => toggleNav()}
+        <NavLink
           to='/'
-          aria-current='page'
+          className={({ isActive }) =>
+            isActive ? 'active activeborder' : 'inactive'
+          }
         >
-          <Icon.Home size='20' />
-        </Link>
-        <Link to='/skills'>Compétences</Link>
-        <Link to='/portfolio'>Portfolio</Link>
-        <Link to='/about'>À propos</Link>
-        <Link to='/contact'>Contact</Link>
+          <Icon.Home size='15' className='homeIcon' />
+        </NavLink>
+        <NavLink
+          to='/skills='
+          className={({ isActive }) =>
+            isActive ? 'active activeborder' : 'inactive'
+          }
+        >
+          COMPÉTENCES
+        </NavLink>
+        <NavLink
+          to='/portfolio'
+          className={({ isActive }) =>
+            isActive ? 'active activeborder' : 'inactive'
+          }
+        >
+          PORTFOLIO
+        </NavLink>
+        <NavLink
+          to='/about'
+          className={({ isActive }) =>
+            isActive ? 'active activeborder' : 'inactive'
+          }
+        >
+          À PROPOS
+        </NavLink>
+        <NavLink
+          to='/contact'
+          className={({ isActive }) =>
+            isActive ? 'active activeborder' : 'inactive'
+          }
+        >
+          CONTACT
+        </NavLink>
       </div>
     </nav>
   )
