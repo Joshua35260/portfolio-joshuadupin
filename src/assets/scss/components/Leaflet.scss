@@ -2,11 +2,16 @@
   display: flex;
   flex-direction: column;
   height: 680px;
-
+  @include mobiletablet {
+    height: 300px;
+    margin-bottom: 20px;
+  }
   // align-items: center;
 
 
   .leaflet-container {
+    display: flex;
+    flex-direction: column;
     width:100%;
     height:100%;
     z-index: 0;

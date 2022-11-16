@@ -11,7 +11,7 @@ export const portfolioData = [
     name: 'Rock your Band',
     languages: ['Tous','React','Javascript'],
     info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus laboriosam aut nihil? Possimus, id facilis dignissimos repudiandae modi dolorum ea accusantium, veritatis debitis odio eveniet quos incidunt eaque nemo eius perferendis consequatur? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus laboriosam aut nihil? Possimus, id facilis dignissimos repudiandae modi dolorum ea accusantium.',
-    picture: 'project2.png'
+    picture: 'project2.jpg'
   },
  
   {
@@ -19,14 +19,14 @@ export const portfolioData = [
     name: 'UX/UI E-commerce',
     languages: ['Tous','React','Javascript'],
     info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus laboriosam aut nihil? Possimus, id facilis dignissimos repudiandae modi dolorum ea accusantium, veritatis debitis odio eveniet quos incidunt eaque nemo eius perferendis consequatur? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus laboriosam aut nihil? Possimus, id facilis dignissimos repudiandae modi dolorum ea accusantium.',
-    picture: 'project4.png'
+    picture: 'project4.jpg'
   },
   {
     id: 4,
     name: 'Age of Champagne',
     languages: ['Tous','React','Node.JS','Javascript'],
     info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus laboriosam aut nihil? Possimus, id facilis dignissimos repudiandae modi dolorum ea accusantium, veritatis debitis odio eveniet quos incidunt eaque nemo eius perferendis consequatur? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus laboriosam aut nihil? Possimus, id facilis dignissimos repudiandae modi dolorum ea accusantium.',
-    picture: 'project5.png'
+    picture: 'project5.jpg'
   },
   {
     id: 5,
@@ -40,6 +40,6 @@ export const portfolioData = [
     name: 'God save the chickens',
     languages: ['Tous','C#'],
     info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus laboriosam aut nihil? Possimus, id facilis dignissimos repudiandae modi dolorum ea accusantium, veritatis debitis odio eveniet quos incidunt eaque nemo eius perferendis consequatur? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus laboriosam aut nihil? Possimus, id facilis dignissimos repudiandae modi dolorum ea accusantium.',
-    picture: 'project3.png'
+    picture: 'project3.jpg'
   },
 ]

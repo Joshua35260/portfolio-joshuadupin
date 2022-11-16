@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import { Link } from 'react-router-dom'
-import * as Icon from 'react-feather'
+
 export default class ProjectCard extends Component {
   handleRadio = event => {
     let radio = event.target.value
