@@ -17,7 +17,7 @@ class Languages extends Component {
     ]
   }
   render() {
-    let { languages, frameworks } = this.state
+    let { languages } = this.state
 
     return (
       <div className='languagesFrameworks'>

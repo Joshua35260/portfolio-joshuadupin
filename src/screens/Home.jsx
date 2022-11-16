@@ -10,6 +10,7 @@ import ProjectList from '../components/ProjectList'
 import Contact from '../components/Contact'
 
 const Home = () => {
+
   const line1 = 'Joshua DUPIN'
   const line2 = 'DÉVELOPPEUR WEB'
 

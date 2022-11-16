@@ -1,42 +1,35 @@
 .contact {
-min-height: 80vh;
-padding: 80px 120px;
-display: flex;
-@include mobiletablet {
-  flex-direction: column;
-}
-.contact-left {
- width: 50%;
-  
-}
-.contact-right {
- width: 50%;
- padding-top: 40px;
-}
+padding: 100px 20vw;
+background-color: rgb(245, 245, 245);
 
-.contact-left> :first-child {
-  justify-content: center;
+h1 {
+  margin-bottom: 60px;
   text-align: center;
-  color: var(--black);
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0;
+  font-family: 'Montserrat';
+  font-size: 40px;
 }
 
-  .contact-img {
-    margin-top: 10vh;
-    object-fit: cover;
-    width: 90%;
-    opacity: 80%;
-    @include mobiletablet {
-      display: none;
-    }
-  
+.contact-in {
+  height: 700px;
+  padding: 10px ;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 4px 8px rgb(200, 200, 200);
+  @include mobiletablet {
+    flex-direction: column;
   }
 }
+.contact-left {
+ width: 40%;
+}
 .contact-right {
- width: 50%;
-
+ display: flex;
+ flex: 3;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
 
 }
 
@@ -45,34 +38,41 @@ display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-  width: 70%;
+  width: 100%;
   
 }
 
 .contact-right .user {
-  width: 100%;
-  height: 100%;
-  padding: 0.3em;
+  width: 80%;
+  height: 40px;
+  padding: 0.2em;
   outline: none;
-  border: 2px solid rgb(0, 170, 255);
-  border-radius: 8px;
   font-size: 16px;
   
 }
-
-.button-contact {
-  cursor: pointer;
-  border: 1px solid rgb(0, 170, 255);
-}
-
 textarea {
   height: 30vh!important;
 }
+
 .button-contact {
-  border: 2px solid rgb(0, 170, 255);
-  height: 4vh;
-  width: 4vw;
+  position: relative;
+  width: fit-content;
+  top: 40px;
+  padding: 20px 40px;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Montserrat';
+  font-weight: bolder;
+  background-color:rgb(100, 0, 255);
+  color: white;
+  font-size: 18PX;
+  
+ 
+  cursor: pointer;
+  
 }
+
+
 
 @include mobiletablet {
   .contact-form {
@@ -82,11 +82,11 @@ textarea {
     
   }
 
-  .contact-in> :first-child {
+  .contact-right> :first-child {
     font-size: 2rem;
   }
 
-  .c-right .user {
+  .contact-right .user {
     width: 16rem;
   }
 
@@ -94,4 +94,5 @@ textarea {
     font-size: 1.5rem !important;
     margin-left: 3rem;
   }
+}
 }

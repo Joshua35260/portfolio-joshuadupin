@@ -13,6 +13,7 @@
 @import './components/ProjectList.scss';
 @import './components/ProjectCard.scss';
 @import './components/Contact.scss';
+@import './components/Leaflet.scss';
 
 
 
@@ -43,13 +44,18 @@
   box-sizing: border-box;
   user-select: none;
   list-style: none;
+  
 
   
   a {
     text-decoration: none;
   }
+ 
 }
-
+h1,h2,h3,h4 {
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family:'OpenSans', 'RobotoSlab',  'Montserrat';
   margin: 0;

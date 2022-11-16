@@ -1,7 +1,15 @@
 import * as Icon from 'react-feather'
 import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react';
 
 const Navbar = () => {
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 0);
+    });
+  }, []);
+
   const toggleNav = () => {
     const hamburgerToggler = document.querySelector('.hamburger')
     const navLinksContainer = document.querySelector('.navlinks-container')
@@ -16,7 +24,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='nav-c'>
+    <nav className={scroll ? "nav-c" : "nav-c sticky"}>
       <button
         className='hamburger'
         type='button'

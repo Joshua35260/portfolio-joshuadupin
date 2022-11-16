@@ -1,6 +1,15 @@
 import React from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
+import { useEffect, useState } from 'react';
 const ProgressBar = props => {
+
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 0);
+    });
+  }, []);
+
   return (
     <div className={props.ClassName}>
       <h3>{props.title}</h3>
@@ -18,7 +27,8 @@ const ProgressBar = props => {
             <div key={item.id} className='languagesList'>
               <ScrollAnimation animateIn='fadeInDownBig'>
               <li>{item.value} </li>
-              <div className='progressBar' style={{ width: progressBar }}></div>
+              <div className='progressBar'
+                   style={{ width: progressBar }}></div>
               </ScrollAnimation>
             </div>
           )

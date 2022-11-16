@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
-import contactMe from '../assets/img/contactme.png'
+import Leaflet from './Leaflet'
 
 const Contact = () => {
   const form = useRef()
@@ -28,35 +28,36 @@ const Contact = () => {
   }
 
   return (
-    <div className='contact'>
-      <div className='contact-left'>
-        <h1>Contactez-moi</h1>
-      <img src={contactMe} alt="Contactez-moi" className='contact-img' />
-        {/* darkMode */}
-       
-        
+    <>
+      <div className='contact'>
+      <h1>CONTACTEZ-MOI</h1>
+        <div className='contact-in'>
+          <div className='contact-left'>
+            <Leaflet />
+          </div>
+          <div className='contact-right'>
+            
+            <form ref={form} onSubmit={sendEmail}>
+              <input
+                type='text'
+                name='user_name'
+                className='user'
+                placeholder='Nom / Prénom'
+              />
+              <input
+                type='email'
+                name='user_email'
+                className='user'
+                placeholder='Email'
+              />
+              <textarea name='message' className='user' placeholder='Message' />
+              <input type='submit' value='ENVOYER' className='button-contact' />
+              <span>{done && 'Thanks for Contacting me'}</span>
+            </form>
+          </div>
+        </div>
       </div>
-      {/* right side form */}
-      <div className='contact-right'>
-        <form ref={form} onSubmit={sendEmail}>
-          <input
-            type='text'
-            name='user_name'
-            className='user'
-            placeholder='Nom'
-          />
-          <input
-            type='email'
-            name='user_email'
-            className='user'
-            placeholder='Email'
-          />
-          <textarea name='message' className='user' placeholder='Message' />
-          <input type='submit' value='Envoyer' className='button-contact' />
-          <span>{done && 'Thanks for Contacting me'}</span>
-        </form>
-      </div>
-    </div>
+    </>
   )
 }
 
