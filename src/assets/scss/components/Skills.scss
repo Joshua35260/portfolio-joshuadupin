@@ -1,10 +1,19 @@
 .skills {
+  padding: 120px 5vw 0 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px;
-  min-height: 1000px;
+  min-height: 960px;
   background-color: rgb(240, 240, 240, 0.5);
+  @include laptop {
+    padding: 100px 2vw 0 2vw
+  }
+  @include tablet {
+    padding: 80px 10vw 0 10vw
+  }
+  @include mobile {
+    padding: 60px 10px 0 10px
+  }
 
   .map {
     object-fit: cover;
@@ -21,14 +30,21 @@
     font-size: 40px;
     color: var(--black);
     font-weight: 900;
+    margin-bottom: 120px;
+
     @include laptop {
       font-size: 36px;
+      margin-bottom: 100px;
     }
-    @include tablet{
+
+    @include tablet {
       font-size: 32px;
+      margin-bottom: 80px;
     }
+
     @include mobile {
       font-size: 28px;
+      margin-bottom: 60px;
     }
 
   }
@@ -37,21 +53,28 @@
     display: flex;
     width: 70%;
     justify-content: space-between;
-    margin: auto;
+    // margin: auto;
 
-    @include laptop {
-      width: 100%;
-    }
+   @include laptop {
+    width: 90%;
+   }
+
     @include mobiletablet {
       width: 100%;
       flex-direction: column;
       align-items: center;
+      
     }
-   
+
     h3 {
       font-size: 24px;
       font-weight: 600;
-      color: var(--black)
+      color: var(--black);
+      margin-bottom: 28px;
+      @include mobiletablet {
+        font-size: 22px;
+        text-align: center;
+      }
     }
 
     .languagesFrameworks {
@@ -89,7 +112,7 @@
             content: '';
             background: rgba(0, 0, 0, 0.2);
             position: absolute;
-            height: 368px;
+            height: 310px;
             width: 1px;
             transform: translate(9px, 19px);
 
@@ -101,14 +124,19 @@
 
         li {
           color: white;
-          margin-top: 20px;
+          margin-top: 40px;
           position: relative;
           top: 20px;
           z-index: 1;
           margin-left: 2px;
-          width: 95.5%;
+          width: 100%;
           background-color: rgba(180, 179, 179, 0.507);
-
+          @include tablet {
+            margin-top: 20px;
+          }
+          @include mobile {
+            margin-top: 10px;
+          }
         }
 
         .progressBar {
@@ -142,12 +170,14 @@
       display: flex;
       flex-direction: column;
       color: var(--black);
-@include mobiletablet {
-  justify-content: center;
-  align-items: center;
-  margin:0 -90px;
-}
-      h3 {
+
+      @include mobiletablet {
+        justify-content: center;
+        align-items: center;
+       
+      }
+
+      h2 {
         font-weight: bolder;
         color: var(--black);
         margin-bottom: 28px;
@@ -156,7 +186,8 @@
           margin-top: 60px;
           text-align: center;
           margin-bottom: 32px;
-         
+          font-size: 22px;
+
         }
       }
 
@@ -165,27 +196,38 @@
         flex-direction: column;
         gap: 20px;
         flex-wrap: wrap;
+
         @include tablet {
           width: 100%;
           flex-direction: row;
+          flex-wrap: wrap;
         }
+
         @include mobile {
           width: 100%;
           flex-direction: row;
+          flex-wrap: wrap;
           gap: 10px;
         }
 
         li {
           display: flex;
-          align-content: center;
-       
-        
+          align-items: center;
+          @include mobiletablet {
+            font-size: 14px;
+          }
+
         }
 
         i {
           display: flex;
           align-content: center;
           margin-right: 10px;
+          @include mobiletablet {
+            transform: scale(0.8);
+            margin-right: 4px;
+          }
+         
         }
       }
     }

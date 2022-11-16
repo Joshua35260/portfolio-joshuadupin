@@ -1,3 +1,13 @@
+.big-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: $blue;
+  transform-origin: 0%;
+  z-index: 4;
+}
 .home {
   height: 100vh;
 
@@ -102,10 +112,10 @@
     }
 
     .intro-4 {
-      position: relative;
+      position: absolute;
       display: flex;
       width: 100%;
-      top: 50vh;
+      // top: 50vh;
       justify-content: center;
       color: white;
       font-size: 48px;

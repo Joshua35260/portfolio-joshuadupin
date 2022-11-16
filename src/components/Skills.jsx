@@ -1,7 +1,7 @@
 import { useInView } from 'react-intersection-observer'
 import Languages from './Languages'
 import OtherSkills from './OtherSkills'
-import map from '../assets/img/map.png'
+import map from '../assets/img/map.webp'
 import '../assets/scss/base/responsive.scss'
 
 const Skills = () => {

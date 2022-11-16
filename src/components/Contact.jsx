@@ -51,8 +51,8 @@ const Contact = () => {
                 placeholder='Email'
               />
               <textarea name='message' className='user' placeholder='Message' />
-              <input type='submit' value='ENVOYER' className='button-contact' />
-              <span>{done && 'Thanks for Contacting me'}</span>
+              <input type='submit' value='Envoyer' className='button-contact' onClick={setDone} />
+              <span className='span-button'>{done && "Merci de m'avoir contacté !"}</span>
             </form>
           </div>
         </div>

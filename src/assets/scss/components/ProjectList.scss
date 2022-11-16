@@ -9,7 +9,7 @@
     padding: 80px 20px
   }
   @include mobile {
-    padding: 60px 20px
+    padding: 60px 10px
   }
   
   h1 {
@@ -19,6 +19,17 @@
     text-shadow:  1px 1px black;
     font-size: 40px;
     margin-bottom: 10px;
+    @include laptop {
+      font-size: 36px;
+    }
+
+    @include tablet {
+      font-size: 32px;
+    }
+
+    @include mobile {
+      font-size: 28px;
+    }
   }
 
   h2 {
@@ -26,7 +37,17 @@
     color: rgb(150, 150, 150);
     margin-bottom: 80px;
     text-shadow:  1px  black;
-    // font-size: 28px;
+    @include laptop {
+      font-size: 24px;
+    }
+
+    @include tablet {
+      font-size: 20px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 }
 
@@ -36,11 +57,11 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
-
 }
 
 .buttonDisplay {
   display: flex;
+  
   margin-inline: auto;
   margin-bottom: 60px;
   border-radius: 10px;
@@ -62,6 +83,8 @@
     }
 
   .buttonProject {
+    display: flex;
+    justify-content: center;
     width: fit-content;
     padding: 20px 40px;
     border-radius: none;
@@ -70,6 +93,15 @@
     cursor: pointer;
     font-family: 'RobotoSlab';
     font-size: 16px;
+    @include tablet {
+      padding: 15px 30px;
+      font-size: 14px;
+    }
+    @include mobile {
+      padding: 5.5px 11px;
+      
+      font-size: 12px;
+    }
   }
 
  

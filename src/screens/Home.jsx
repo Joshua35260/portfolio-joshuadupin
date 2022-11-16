@@ -2,14 +2,21 @@ import React from 'react'
 import ContactBar from '../components/ContactBar'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { motion } from 'framer-motion'
-import homeBackground from '../assets/img/pfpaper11.jpg'
+import { motion, useScroll, useSpring } from 'framer-motion'
+import homeBackground from '../assets/img/pfpaper11.webp'
 import * as Icon from 'react-feather'
 import Skills from '../components/Skills'
 import ProjectList from '../components/ProjectList'
 import Contact from '../components/Contact'
 
 const Home = () => {
+
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
 
   const line1 = 'Joshua DUPIN'
   const line2 = 'DÉVELOPPEUR WEB'
@@ -26,10 +33,27 @@ const Home = () => {
       opacity: 1,
       transition: {
         duration: 1.5,
-        delay: 4,
+        delay: 5,
         type: 'ease',
         repeatType: 'reverse',
         repeat: 'Infinity'
+      }
+    }
+  }
+  const arrowContainer = {
+    hidden: {
+      y: '60vh',
+      opacity: 1,
+      rotate: 180
+    },
+    visible: {
+      y: '0',
+      rotate: 0,
+      opacity: 1,
+      transition: {
+        duration: 3,
+        delay: 0,
+        type: 'ease',
       }
     }
   }
@@ -65,6 +89,7 @@ const Home = () => {
 
   return (
     <>
+    <motion.div className="big-bar" style={{ scaleX }}></motion.div>
       <div className='home'>
         <div className='home-background'>
           <img src={homeBackground} alt='' className='home-bg'></img>
@@ -104,14 +129,14 @@ const Home = () => {
 
           <div className='intro-3'>FULLSTACK</div>
           <motion.div
-            className='intro-4'
-            animate='visible'
-            initial='hidden'
-            variants={arrowVariant}
+            className='intro-4'   
+            initial={{ opacity: 0, y: 160, }}
+            animate={{ opacity: 1, rotate: 180 }}
+            transition={{ duration: 2.5 }}
           >
-            <span className='arrow'>
-              <Icon.ChevronsDown color='white' size='64' />
-            </span>
+            <motion.span className='arrow' >
+              <Icon.ChevronsUp color='white' size='64' />
+            </motion.span>
           </motion.div>
         </div>
       </div>
@@ -119,7 +144,8 @@ const Home = () => {
       <ProjectList />
       <Contact />
       <Footer />
-    </>
+      
+       </>
   )
 }
 

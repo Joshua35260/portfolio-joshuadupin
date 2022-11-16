@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 export default class ProjectCard extends Component {
   handleRadio = event => {
@@ -11,10 +12,19 @@ export default class ProjectCard extends Component {
     let { name, picture, info } = this.props.item
 
     return (
-      <div className='card'>
+      <motion.div className='card'   initial='hidden'
+      whileInView='visible'
+      viewport={{ once: false }}
+      transition={{ duration: 1, delay: 0 }}
+      variants={{
+        visible: { opacity: 1, y: 0, x: 0 },
+        hidden: { opacity: 0, x: 600 }
+      }}>
         <div className='card-header'>
           <img
             src={require(`../assets/img/${picture}`)}
+            width="370"
+            height="240"
             alt={name}
             className='header-image'
           ></img>
@@ -28,7 +38,7 @@ export default class ProjectCard extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     )
   }
 }
