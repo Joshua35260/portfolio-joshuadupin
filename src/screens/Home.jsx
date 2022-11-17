@@ -1,15 +1,19 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import * as Icon from 'react-feather'
+import { motion, useScroll, useSpring } from 'framer-motion'
 import ContactBar from '../components/ContactBar'
 import Navbar from '../components/Navbar'
+
 import Footer from '../components/Footer'
-import { motion, useScroll, useSpring } from 'framer-motion'
 import homeBackground from '../assets/img/pfpaper11.webp'
-import * as Icon from 'react-feather'
 import Skills from '../components/Skills'
 import ProjectList from '../components/ProjectList'
 import Contact from '../components/Contact'
+import MobileNav from '../components/MobileNav'
 
 const Home = () => {
+
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -20,42 +24,6 @@ const Home = () => {
   const line1 = 'Joshua DUPIN'
   const line2 = 'DÉVELOPPEUR WEB'
 
-  const arrowVariant = {
-    hidden: {
-      y: '60px',
-      opacity: 0,
-      rotate: 0
-    },
-    visible: {
-      y: '0',
-      rotate: 0,
-      opacity: 1,
-      transition: {
-        duration: 1.5,
-        delay: 5,
-        type: 'ease',
-        repeatType: 'reverse',
-        repeat: 'Infinity'
-      }
-    }
-  }
-  const arrowContainer = {
-    hidden: {
-      y: '60vh',
-      opacity: 1,
-      rotate: 180
-    },
-    visible: {
-      y: '0',
-      rotate: 0,
-      opacity: 1,
-      transition: {
-        duration: 3,
-        delay: 0,
-        type: 'ease'
-      }
-    }
-  }
   const sentence = {
     hidden: { opacity: 1 },
     visible: {
@@ -89,7 +57,9 @@ const Home = () => {
   return (
     <>
       <motion.div className='big-bar' style={{ scaleX }}></motion.div>
-      <div className='home'>
+      
+  
+      <section className='home'>
         <div className='home-background'>
           <img src={homeBackground} alt='' className='home-bg'></img>
         </div>
@@ -133,17 +103,17 @@ const Home = () => {
             whileInView='visible'
             viewport={{ once: true }}
             animate={{ rotate: 180 }}
-            transition={{ duration: 1.5, delay: 3.5, type: 'ease' }}
+            transition={{ duration: 2, delay: 0, type: 'spring' }}
             variants={{
               visible: { opacity: 1, y: 600 },
-              hidden: { opacity: 0, y: 150 }
+              hidden: { opacity: 0, y: 0 }
             }}
           >
             <motion.span
               className='arrow'
               transition={{
                 duration: 1,
-                delay: 3.5,
+                delay: 3,
                 repeat: 'Infinity',
                 repeatType: 'reverse'
               }}
@@ -156,11 +126,12 @@ const Home = () => {
             </motion.span>
           </motion.div>
         </div>
-      </div>
+      </section>
       <Skills />
       <ProjectList />
       <Contact />
       <Footer />
+      <MobileNav />
     </>
   )
 }

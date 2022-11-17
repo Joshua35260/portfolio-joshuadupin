@@ -30,7 +30,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className='contact'>
+      <section className='contact'>
         <motion.h1
           initial='hidden'
           whileInView='visible'
@@ -84,7 +84,7 @@ const Contact = () => {
             </form>
           </div>
         </motion.div>
-      </div>
+      </section>
     </>
   )
 }

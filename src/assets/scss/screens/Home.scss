@@ -8,6 +8,7 @@
   transform-origin: 0%;
   z-index: 4;
 }
+
 .home {
   height: 100vh;
 
@@ -62,9 +63,11 @@
       font-family: 'RobotoSlab';
       font-weight: lighter;
       color: rgb(255, 255, 255);
+
       @include tablet {
         font-size: 28px;
       }
+
       @include mobile {
         font-size: 24px;
       }
@@ -84,12 +87,16 @@
       font-weight: 900;
       margin-bottom: 4px;
       color: white;
+
       @include tablet {
         font-size: 28px;
       }
+
       @include mobile {
         font-size: 24px;
+        margin-bottom: 6px;
       }
+
       :nth-child(11) {
         margin-right: 8px;
       }
@@ -103,9 +110,11 @@
       font-weight: 900;
       font-size: 3rem;
       animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 3s both;
+
       @include tablet {
         font-size: 28px;
       }
+
       @include mobile {
         font-size: 24px;
       }
@@ -139,5 +148,4 @@
       opacity: 1;
     }
   }
-
 }

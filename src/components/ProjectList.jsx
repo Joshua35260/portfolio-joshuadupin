@@ -26,7 +26,7 @@ export default class ProjectList extends Component {
     let { projects, buttons, selectedButton } = this.state
 
     return (
-      <div className='portfolioContent'>
+      <section className='portfolioContent'>
         <motion.h1
           initial='hidden'
           whileInView='visible'
@@ -63,7 +63,7 @@ export default class ProjectList extends Component {
               return <Card key={project.id} item={project} />
             })}
         </div>
-      </div>
+      </section>
     )
   }
 }
