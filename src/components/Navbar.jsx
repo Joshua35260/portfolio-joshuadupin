@@ -12,6 +12,7 @@ const Navbar = () => {
 
   return (
     <nav className={scroll ? 'nav-c' : 'nav-c sticky'}>
+       {/* <span><Icon.Menu color='red' size='24' /></span> */}
       <div
         className={scroll ? 'navlinks-container' : 'navlinks-container sticky'}
       >

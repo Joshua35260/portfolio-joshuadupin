@@ -18,7 +18,7 @@ export default class ProjectCard extends Component {
       transition={{ duration: 1.5, delay: 0, type: 'spring' }}
       variants={{
         visible: { opacity: 1, y: 0,},
-        hidden: { opacity: 0, y: 400 }
+        hidden: { opacity: 0, y: 250 }
       }}>
         <div className='card-header'>
           <img

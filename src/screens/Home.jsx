@@ -133,7 +133,7 @@ const Home = () => {
             whileInView='visible'
             viewport={{ once: true }}
             animate={{ rotate: 180 }}
-            transition={{ duration: 1.5, delay: 3.5, type: 'spring' }}
+            transition={{ duration: 1.5, delay: 3.5, type: 'ease' }}
             variants={{
               visible: { opacity: 1, y: 600 },
               hidden: { opacity: 0, y: 150 }
@@ -143,7 +143,7 @@ const Home = () => {
               className='arrow'
               transition={{
                 duration: 1,
-                delay: 4.5,
+                delay: 3.5,
                 repeat: 'Infinity',
                 repeatType: 'reverse'
               }}
