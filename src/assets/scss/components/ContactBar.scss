@@ -6,7 +6,7 @@ justify-content: center;
   font-size: 13px;
   }
   background-color: rgba(0, 0, 0, 0.4);
-  @media  (max-width: 664px) {
+  @include mobile {
     display: none;
   } 
     

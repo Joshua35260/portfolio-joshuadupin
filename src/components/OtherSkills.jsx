@@ -7,7 +7,7 @@ const OtherSkills = () => {
     <motion.div
       initial='hidden'
       whileInView='visible'
-      viewport={{ once: false }}
+      viewport={{ once: true }}
       transition={{ duration: 1.5, delay: 0 }}
       variants={{
         visible: { opacity: 1, scale: 1 },

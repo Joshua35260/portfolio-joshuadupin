@@ -14,11 +14,11 @@ export default class ProjectCard extends Component {
     return (
       <motion.div className='card'   initial='hidden'
       whileInView='visible'
-      viewport={{ once: false }}
-      transition={{ duration: 1, delay: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.5, delay: 0, type: 'spring' }}
       variants={{
-        visible: { opacity: 1, y: 0, x: 0 },
-        hidden: { opacity: 0, x: 600 }
+        visible: { opacity: 1, y: 0,},
+        hidden: { opacity: 0, y: 400 }
       }}>
         <div className='card-header'>
           <img

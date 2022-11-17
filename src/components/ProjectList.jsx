@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import { portfolioData } from '../assets/data/portfolioData'
 import Card from './ProjectCard'
+import { motion } from 'framer-motion'
 
 export default class ProjectList extends Component {
   state = {
@@ -13,21 +14,31 @@ export default class ProjectList extends Component {
       { id: 5, value: 'PHP' },
       { id: 6, value: 'C#' }
     ],
-     selectedButton: 'Tous'
+    selectedButton: 'Tous'
   }
 
   handleButton = event => {
     let button = event.target.value
-    this.setState({ selectedButton: button, })
-
+    this.setState({ selectedButton: button })
   }
 
   render() {
     let { projects, buttons, selectedButton } = this.state
-    
+
     return (
       <div className='portfolioContent'>
-        <h1>MES RÉALISATIONS</h1>
+        <motion.h1
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0, type: 'spring' }}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 }
+          }}
+        >
+          MES RÉALISATIONS
+        </motion.h1>
         <h2>Une partie des projets sur lesquels j'ai travaillé</h2>
         <div className='buttonDisplay'>
           {buttons.map(button => {
@@ -56,4 +67,3 @@ export default class ProjectList extends Component {
     )
   }
 }
-

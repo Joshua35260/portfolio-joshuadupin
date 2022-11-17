@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import Leaflet from './Leaflet'
+import { motion } from 'framer-motion'
 
 const Contact = () => {
   const form = useRef()
@@ -30,13 +31,33 @@ const Contact = () => {
   return (
     <>
       <div className='contact'>
-      <h1>CONTACTEZ-MOI</h1>
-        <div className='contact-in'>
+        <motion.h1
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0, type: 'spring' }}
+          variants={{
+            visible: { opacity: 1, scale: 1},
+            hidden: { opacity: 0, scale: 0 }
+          }}
+        >
+          CONTACTEZ-MOI
+        </motion.h1>
+        <motion.div
+          className='contact-in'
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0, type: 'spring' }}
+          variants={{
+            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, y: 300 }
+          }}
+        >
           <div className='contact-left'>
             <Leaflet />
           </div>
           <div className='contact-right'>
-            
             <form ref={form} onSubmit={sendEmail}>
               <input
                 type='text'
@@ -51,11 +72,18 @@ const Contact = () => {
                 placeholder='Email'
               />
               <textarea name='message' className='user' placeholder='Message' />
-              <input type='submit' value='Envoyer' className='button-contact' onClick={setDone} />
-              <span className='span-button'>{done && "Merci de m'avoir contacté !"}</span>
+              <input
+                type='submit'
+                value='Envoyer'
+                className='button-contact'
+                onClick={setDone}
+              />
+              <span className='span-button'>
+                {done && "Merci de m'avoir contacté !"}
+              </span>
             </form>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   )

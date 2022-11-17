@@ -42,18 +42,7 @@
   box-sizing: border-box;
   user-select: none;
   list-style: none;
-  
 
-  .big-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 10px;
-    background: $blue;
-    transform-origin: 0%;
-    z-index: 50;
-  }
   a {
     text-decoration: none;
   }
