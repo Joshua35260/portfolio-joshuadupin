@@ -1,12 +1,16 @@
 .big-bar {
+  // display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 3px;
   background: $blue;
   transform-origin: 0%;
   z-index: 4;
+  // @include mobile {
+  //   display: block;
+  // }
 }
 
 .home {
@@ -130,6 +134,9 @@
       font-size: 48px;
       font-weight: 900;
     }
+  }
+  .arrow{
+    cursor: pointer;
   }
 
   @keyframes tracking-in-contract-bck-top {

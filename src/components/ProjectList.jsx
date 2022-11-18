@@ -26,7 +26,7 @@ export default class ProjectList extends Component {
     let { projects, buttons, selectedButton } = this.state
 
     return (
-      <section className='portfolioContent'>
+      <section className='portfolio'>
         <motion.h1
           initial='hidden'
           whileInView='visible'

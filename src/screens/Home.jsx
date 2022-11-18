@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import * as Icon from 'react-feather'
 import { motion, useScroll, useSpring } from 'framer-motion'
+import { Link } from 'react-scroll'
 import ContactBar from '../components/ContactBar'
 import Navbar from '../components/Navbar'
-
 import Footer from '../components/Footer'
 import homeBackground from '../assets/img/pfpaper11.webp'
 import Skills from '../components/Skills'
@@ -13,7 +12,6 @@ import Contact from '../components/Contact'
 import MobileNav from '../components/MobileNav'
 
 const Home = () => {
-
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -57,8 +55,7 @@ const Home = () => {
   return (
     <>
       <motion.div className='big-bar' style={{ scaleX }}></motion.div>
-      
-  
+
       <section className='home'>
         <div className='home-background'>
           <img src={homeBackground} alt='' className='home-bg'></img>
@@ -109,21 +106,25 @@ const Home = () => {
               hidden: { opacity: 0, y: 0 }
             }}
           >
-            <motion.span
-              className='arrow'
-              transition={{
-                duration: 1,
-                delay: 3,
-                repeat: 'Infinity',
-                repeatType: 'reverse'
-              }}
-              variants={{
-                visible: { opacity: 1, y: 0 },
-                hidden: { opacity: 1, y: 40 }
-              }}
-            >
-              <Icon.ChevronsUp color='white' size='64' />
-            </motion.span>
+            
+              <motion.span
+                className='arrow'
+                transition={{
+                  duration: 1,
+                  delay: 3,
+                  repeat: 'Infinity',
+                  repeatType: 'reverse'
+                }}
+                variants={{
+                  visible: { opacity: 1, y: 0 },
+                  hidden: { opacity: 1, y: 40 }
+                }}
+              >
+              <Link to='skills' spy={true} smooth={true}>
+                 <Icon.ChevronsUp color='white' size='64' />
+                 </Link> 
+              </motion.span>
+            
           </motion.div>
         </div>
       </section>

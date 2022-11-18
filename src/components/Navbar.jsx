@@ -1,6 +1,7 @@
 import * as Icon from 'react-feather'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-scroll'
 import { useEffect, useState } from 'react'
+import iconHome from '../assets/img/home.svg'
 
 const Navbar = () => {
   const [scroll, setScroll] = useState('relative')
@@ -15,46 +16,21 @@ const Navbar = () => {
       <div
         className={scroll ? 'navlinks-container' : 'navlinks-container sticky'}
       >
-        <NavLink
-          to='/'
-          className={({ isActive }) =>
-            isActive ? 'active activeborder' : 'inactive'
-          }
-        >
-          <Icon.Home size='15' className='homeIcon' />
-        </NavLink>
-        <NavLink
-          to='/skills='
-          className={({ isActive }) =>
-            isActive ? 'active activeborder' : 'inactive'
-          }
-        >
+        <Link to='home' spy={true} smooth={true} activeClass='active'>
+          <img src={iconHome} alt="lien accueil" className='icon-home'/>
+        </Link>
+        <Link to='skills' spy={true} smooth={true} activeClass='active'>
           COMPÉTENCES
-        </NavLink>
-        <NavLink
-          to='/portfolio'
-          className={({ isActive }) =>
-            isActive ? 'active activeborder' : 'inactive'
-          }
-        >
+        </Link>
+        <Link to='portfolio' spy={true} smooth={true} activeClass='active'>
           PORTFOLIO
-        </NavLink>
-        <NavLink
-          to='/about'
-          className={({ isActive }) =>
-            isActive ? 'active activeborder' : 'inactive'
-          }
-        >
+        </Link>
+        <Link to='about' spy={true} smooth={true} activeClass='active'>
           À PROPOS
-        </NavLink>
-        <NavLink
-          to='/contact'
-          className={({ isActive }) =>
-            isActive ? 'active activeborder' : 'inactive'
-          }
-        >
+        </Link>
+        <Link to='contact' spy={true} smooth={true} activeClass='active'>
           CONTACT
-        </NavLink>
+        </Link>
       </div>
     </nav>
   )
