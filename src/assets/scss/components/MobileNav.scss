@@ -1,95 +1,85 @@
-.nav-mobile {
+.nav-mobile-c {
   position: fixed;
-  display: flex;
+  display: none;
   bottom: 0;
   z-index: 4;
-  right: 10px;
+  right: 20px;
   bottom: 10px;
-  display: flex;
   gap: 10px;
-  
-
-.burger-c {
-  position: relative;
+ @include mobile {
   display: flex;
+ }
+
+  .burger-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.4);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: 4;
+    padding-top: 4px;
+    cursor: pointer;
+
+    .burger {
+      z-index: 4;
+    }
+  }
+
+  .arrow-up-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.4);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: 4;
+    cursor: pointer;
+
+    .arrow-up {
+      z-index: 4;
+    }
+  }
+}
+
+.burger-menu {
+  position: fixed;
+  display: none;
   justify-content: center;
   align-items: center;
-  background-color: rgb(0, 0, 0, 0.4);
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  z-index: 4;
-  cursor: pointer;
-  @include mobile {
-  display: flex;
-
-  }
-}
-.burger {
-  padding-top: 0px;
-  z-index: 4;
-  @include mobile {
-    display: flex; 
-  }
-}
-.arrow-up-c {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(0, 0, 0, 0.4);
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  z-index: 4;
-  cursor: pointer;
-  @include mobile {
-  display: flex;
-
-  }
-}
-.arrow-up {
-  display: flex;
-  z-index: 4;
-  position: relative;
-  
-
+  font-family: 'RobotoSlab';
+  background: rgb(0, 0, 0, 0.5);
+  bottom: 0;
+  z-index: 3;
+  padding: 16px 100px 0px 0;
+  width: 100%;
   @include mobile {
     display: flex;
+   }
+  ul {
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 20px;
+  }
+
+  a {
+    display: block;
+    padding: 0px 0px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+
+  }
+
+  a:hover {
+    color: $blue;
   }
 }
 
-
-.menuNav {
-  overflow-y: scroll;
-  position: fixed;
-  background: rgb(0, 0, 0, 0.5);
-  border-radius: 10%;
-  right: 0;
-  bottom: 0;
-  height: 200px;
-  width: 0;
-  overflow: hidden;
-  z-index: 3;
-  margin: 0;
-  padding: 0;
-}
-
-.menuNav.showMenu {
-  width: 50%;
-  margin: 0;
-}
-
-a {
-  display: block;
-  padding: 0px 0px;
-  text-decoration: none;
-  color: #3fffd2;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.menuNav li:first-child {
-  
-}
+.hidden {
+  display: none;
 }

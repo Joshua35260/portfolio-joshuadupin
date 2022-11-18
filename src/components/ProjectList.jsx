@@ -7,7 +7,7 @@ export default class ProjectList extends Component {
   state = {
     projects: portfolioData,
     buttons: [
-      { id: 1, value: 'Tous', className: 'btnActive' },
+      { id: 1, value: 'Tous', },
       { id: 2, value: 'React' },
       { id: 3, value: 'Node.JS' },
       { id: 4, value: 'Javascript' },

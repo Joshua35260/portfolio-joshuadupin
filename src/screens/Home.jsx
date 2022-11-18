@@ -106,25 +106,23 @@ const Home = () => {
               hidden: { opacity: 0, y: 0 }
             }}
           >
-            
-              <motion.span
-                className='arrow'
-                transition={{
-                  duration: 1,
-                  delay: 3,
-                  repeat: 'Infinity',
-                  repeatType: 'reverse'
-                }}
-                variants={{
-                  visible: { opacity: 1, y: 0 },
-                  hidden: { opacity: 1, y: 40 }
-                }}
-              >
+            <motion.span
+              className='arrow'
+              transition={{
+                duration: 1,
+                delay: 3,
+                repeat: 'Infinity',
+                repeatType: 'reverse'
+              }}
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 1, y: 40 }
+              }}
+            >
               <Link to='skills' spy={true} smooth={true}>
-                 <Icon.ChevronsUp color='white' size='64' />
-                 </Link> 
-              </motion.span>
-            
+                <Icon.ChevronsUp color='white' size='64' />
+              </Link>
+            </motion.span>
           </motion.div>
         </div>
       </section>
