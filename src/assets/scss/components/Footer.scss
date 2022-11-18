@@ -1,0 +1,172 @@
+.foot {
+
+
+}
+
+.foot-in {
+  padding: 100px 20px 60px 20px;
+  background: $black;
+  color: $white;
+@include tablet {
+  padding: 80px 20px 40px 20px;
+}
+  @include mobile {
+    padding: 60px 10px 40px 10px;
+  }
+
+  h1,
+  h2 {
+    font-size: 20px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    @include tablet {
+      font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
+
+  }
+
+  li {
+    color: #9a9a9a;
+    font-size: 14px;
+
+
+    @media (max-width: 768px) {
+      font-size: 10px;
+      display: inline;
+      gap: 10px;
+      margin-right: 6px;
+    }
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #9a9a9a;
+    cursor: pointer;
+  }
+
+
+ 
+
+  @media (min-width: 768px) {
+    display: flex;
+    .foot-left {
+      width: 66%;
+      padding-right: 40px;
+      padding-left: 8vw;
+    }
+    
+    .foot-right {
+      width: 34%;
+      
+    }
+  }
+
+  .foot-desc-p {
+    font-size: 14px;
+    text-align: left;
+    max-width: 70ch;
+    color: #9a9a9a;
+
+    @include tablet {
+      font-size: 13px;
+    }
+
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+}
+
+
+.contact-bar2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #2a2a2a;
+}
+
+.cbar-c {
+  display: flex;
+  width: 66%;
+  height: 40px;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: 13px;
+
+  @include tablet {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  @include mobile {
+    width: 100%;
+    font-size: 11px;
+  }
+
+  * {
+    color: white;
+    text-decoration: underline;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-inline: 10px;
+    align-items: center;
+  }
+
+  *:hover {
+    color: $blue;
+    transition: 0.3s;
+  }
+}
+
+
+.foot-credits {
+  text-align: center;
+  font-family: 'RobotoSlab';
+  font-size: 12px;
+  bottom: 10px;
+  color: #9a9a9a;
+  background-color: #2a2a2a;
+  text-decoration: none;
+  cursor: pointer;
+  * {
+    text-decoration: none;
+  }
+  @media (max-width: 768px) {
+    font-size: 10px;
+    margin-left: -20px;
+  }
+
+  span {
+    color: #9a9a9a;
+    margin-right: 5px;
+    @media (max-width: 768px) {
+      margin-right: 2px;
+    }
+  }
+}
+.cbar-link {
+  @include mobile  {
+margin-left: -50px;
+
+  }
+}
+.icon-space {
+  margin-right: 10px;
+  @media (max-width: 768px) 
+  {
+    margin-right: 2px;
+  } 
+}

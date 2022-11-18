@@ -8,12 +8,20 @@ const ContactBar = () => {
     <nav className='contact-bar'>
       <div className='cbar-c'>
         <div className='cbar-1'>
-          <NavLink to='https://www.linkedin.com/in/joshua-dupin/'><Icon.Linkedin size='20' /></NavLink>
-          <NavLink to='https://github.com/Joshua35260'><Icon.GitHub size='20' /></NavLink>
-          <NavLink to='https://www.instagram.com/sunji_josh/?hl=fr'><Icon.Instagram size='20' /></NavLink>
-          <NavLink to='https://www.facebook.com/SunjiDJosh'><Icon.Facebook size='20' /></NavLink>
+          <NavLink to='https://www.linkedin.com/in/joshua-dupin/'>
+            <Icon.Linkedin size='20' />
+          </NavLink>
+          <NavLink to='https://github.com/Joshua35260'>
+            <Icon.GitHub size='20' />
+          </NavLink>
+          <NavLink to='https://www.instagram.com/sunji_josh/?hl=fr'>
+            <Icon.Instagram size='20' />
+          </NavLink>
+          <NavLink to='https://www.facebook.com/SunjiDJosh'>
+            <Icon.Facebook size='20' />
+          </NavLink>
         </div>
-        <div className='cbar-2'></div>
+
         <a href={CV} download onClick={CV}>
           Télécharger mon CV
         </a>
