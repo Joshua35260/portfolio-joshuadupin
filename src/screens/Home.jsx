@@ -10,7 +10,7 @@ import Skills from '../components/Skills'
 import ProjectList from '../components/ProjectList'
 import Contact from '../components/Contact'
 import MobileNav from '../components/MobileNav'
-
+import About from '../components/About'
 const Home = () => {
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
@@ -128,6 +128,7 @@ const Home = () => {
       </section>
       <Skills />
       <ProjectList />
+      <About />
       <Contact />
       <Footer />
       <MobileNav />

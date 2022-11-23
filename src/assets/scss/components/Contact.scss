@@ -1,106 +1,96 @@
 .contact {
-padding: 100px 20vw;
-background-color: rgb(245, 245, 245);
-@include tablet {
-  padding: 80px 40px;
-  margin-bottom: 80px;
-}
-@include mobile {
-  padding: 60px 10px;
-  margin-bottom: 100px;
-}
-
-h1 {
-  margin-bottom: 60px;
-  text-align: center;
-  font-family: 'Montserrat';
-  font-size: 40px;
-  @include laptop {
-    font-size: 36px;
+  padding: 100px 20vw 180px 20vw;
+  background-color: $black;
+  span {
+    color: green;
   }
-
   @include tablet {
-    font-size: 32px;
-  }
-
-  @include mobile {
-    font-size: 28px;
-  }
-}
-
-.contact-in {
-  height: 700px;
-  padding: 10px ;
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 2px 4px 8px rgb(200, 200, 200);
-  @include mobiletablet {
-    flex-direction: column;
-    height: auto;
+    padding: 80px 40px;
     
   }
-}
-.contact-left {
- width: 40%;
- @include mobiletablet {
-  width: 100%;
-}
-}
-.contact-right {
- display: flex;
- flex: 60%;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- @include mobiletablet {
- width: 100%;
-}
-
-}
-
-.contact-right>form {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-  width: 100%;
-  
-}
-
-.contact-right .user {
-  width: 80%;
-  height: 40px;
-  padding: 0.2em;
-  outline: none;
-  font-size: 16px;
   @include mobile {
+    padding: 60px 10px;
+  
+  }
+  @include laptop {
+    padding: 100px 0;
+  }
+
+  
+  h1 {
+    margin-bottom: 60px;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    color: $white;
+    @include laptop {
+      font-size: 36px;
+    }
+  
+    @include tablet {
+      font-size: 32px;
+    }
+  
+    @include mobile {
+      font-size: 28px;
+    }
+  }
+  
+  .contact-in {
+    height: 700px;
+    display: flex;
+    justify-content: space-between;
+    background-color: $white;
+    border-radius: 10px;
+
+   
+    @include mobiletablet {
+      flex-direction: column;
+      height: auto;
+      
+    }
+  }
+  .contact-left {
+   width: 40%;
+   @include mobiletablet {
     width: 100%;
   }
-  
-}
-textarea {
-  height: 30vh!important;
-}
-
-.button-contact {
-  position: relative;
-  width: fit-content;
-  top: 40px;
-  padding: 15px 30px;
-  border-radius: 10px;
-  border: none;
-  background-color:$blue;
-  color: white;
-  font-size: 18PX;
-  cursor: pointer;
-  @include mobiletablet {
-    padding: 10px 20px;
   }
-}
-
-.span-button {
-  margin-top: 12px;
-}
-}
+  .contact-right {
+   display: flex;
+   flex: 60%;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   @include mobiletablet {
+   width: 100%;
+  }
+  
+  }
+  
+  .contact-right>form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+   
+    
+  }
+  
+  .contact-right .user {
+    width: 95%;
+    height: 40px;
+    padding: 0.2em;
+    outline: none;
+    font-size: 16px;
+    @include mobile {
+      width: 99%;
+    }
+    
+  }
+  textarea {
+    height: 30vh!important;
+  }
+ 
+  }

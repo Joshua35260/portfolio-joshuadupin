@@ -5,6 +5,22 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <footer className='foot'>
+        <div className='contact-bar2'>
+      <div className='cbar-c'>
+        <div className='cbar-link'>
+          <Link to='https://www.linkedin.com/in/joshua-dupin/'><Icon.Linkedin size='16' /></Link>
+          <Link to='https://github.com/Joshua35260'><Icon.GitHub size='16' /></Link>
+          <Link to='https://www.instagram.com/sunji_josh/?hl=fr'><Icon.Instagram size='16' /></Link>
+          <Link to='https://www.facebook.com/SunjiDJosh'><Icon.Facebook size='16' /></Link>
+        </div>
+     
+        <div className='foot-credits'><span>©</span>joshuadupin.me</div>
+       
+        <a href={CV} download onClick={CV}>
+          Télécharger mon CV
+        </a>
+      </div>
+    </div>
       <div className='foot-in'>
 
         <div className='foot-left'>
@@ -43,22 +59,7 @@ const Footer = () => {
 
       </div>
 
-      <div className='contact-bar2'>
-      <div className='cbar-c'>
-        <div className='cbar-link'>
-          <Link to='https://www.linkedin.com/in/joshua-dupin/'><Icon.Linkedin size='16' /></Link>
-          <Link to='https://github.com/Joshua35260'><Icon.GitHub size='16' /></Link>
-          <Link to='https://www.instagram.com/sunji_josh/?hl=fr'><Icon.Instagram size='16' /></Link>
-          <Link to='https://www.facebook.com/SunjiDJosh'><Icon.Facebook size='16' /></Link>
-        </div>
-     
-        <div className='foot-credits'><span>©</span>joshuadupin.me</div>
-       
-        <a href={CV} download onClick={CV}>
-          Télécharger mon CV
-        </a>
-      </div>
-    </div>
+    
     </footer>
   )
 }

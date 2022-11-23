@@ -51,7 +51,7 @@ const Contact = () => {
           transition={{ duration: 1, delay: 0, type: 'spring' }}
           variants={{
             visible: { opacity: 1, y: 0 },
-            hidden: { opacity: 0, y: 300 }
+            hidden: { opacity: 0, y: 0 }
           }}
         >
           <div className='contact-left'>
@@ -75,7 +75,7 @@ const Contact = () => {
               <input
                 type='submit'
                 value='Envoyer'
-                className='button-contact'
+                className='button button-contact'
                 onClick={setDone}
               />
               <span className='span-button'>

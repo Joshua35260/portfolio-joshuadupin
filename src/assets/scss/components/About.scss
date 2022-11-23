@@ -1,0 +1,110 @@
+.about {
+  display: block;
+  padding: 100px 5vw 100px 5vw;
+  @include tablet {
+    padding: 80px 4vw 80px 4vw;
+  }
+  @include tablet {
+    padding: 60px 2vw 60px 2vw;
+  }
+  @include mobile {
+    padding: 40px 2vw 40px 2vw;
+  }
+  h1{
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    margin-bottom: 100px;
+    color: $black;
+    @include laptop {
+      font-size:36px
+    }
+    @include tablet {
+      font-size:32px
+    }
+    @include mobile {
+      font-size:28px
+    }
+  }
+
+.about-in {
+  display: flex;
+  @include mobiletablet {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+.about-left {
+  width: 70%;
+  padding-right: 40px;
+  @include mobiletablet {
+    width: 100%;
+  }
+
+ 
+  h2 {
+    font-family: 'OpenSans';
+    font-size: 36px;
+    @include laptop {
+      font-size:34px
+    }
+    @include tablet {
+      font-size:32px
+    }
+    @include mobile {
+      font-size:30px
+    }
+  }
+  h3 {
+    font-family: 'OpenSans';
+    font-size: 28px;
+    margin-bottom: 60px;
+    @include laptop {
+      font-size:26px
+    }
+    @include tablet {
+      font-size:24px
+    }
+    @include mobile {
+      font-size:22px
+    }
+  }
+  p {
+   font-family: 'RobotoSlab';
+   max-width: 80ch;
+   line-height: 1.5;
+  }
+  .about-name :nth-child(5) {
+    margin-bottom: 80px;
+  }
+
+ .s-button {
+    margin-bottom: 40px;
+  }
+}
+.me {
+  border-radius: 10px;
+  position: relative;
+  @include tablet {
+    width: 400px
+  } @include mobile {
+    width: 300px
+  }
+}
+
+.about-right {
+  width: 30%;
+  @include mobiletablet {
+    display: flex;
+
+    justify-content: center;
+    width: 100%;
+  
+  }
+}
+
+}
+}
+
+

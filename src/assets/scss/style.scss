@@ -16,6 +16,7 @@
 @import './components/Contact.scss';
 @import './components/Leaflet.scss';
 @import './components/MobileNav.scss';
+@import './components/Experience.scss';
 
 
 
@@ -63,5 +64,15 @@ body {
 }
   button {
     cursor: pointer;
+    padding: 12px 20px 12px 20px;
+    background-color: $black;
+    color: $white;
+  }
+
+ .button-contact {
+      cursor: pointer;
+      padding: 12px 20px 12px 20px;
+      background-color: $black;
+      color: $white;
   }
 
