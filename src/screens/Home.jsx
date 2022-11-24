@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import * as Icon from 'react-feather'
 import { motion, useScroll, useSpring } from 'framer-motion'
 import { Link } from 'react-scroll'
@@ -11,6 +10,8 @@ import ProjectList from '../components/ProjectList'
 import Contact from '../components/Contact'
 import MobileNav from '../components/MobileNav'
 import About from '../components/About'
+
+
 const Home = () => {
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {

@@ -2,7 +2,7 @@ import Github from '../assets/img/github.png'
 import LinkedIn from '../assets/img/linkedin.png'
 import Instagram from '../assets/img/instagram.png'
 import me from '../assets/img/me.png'
-
+import Experience from './Experience'
 import { motion } from 'framer-motion'
 import CV from '../assets/CV.pdf'
 const About = () => {
@@ -42,13 +42,15 @@ const About = () => {
                 Télécharger CV
               </button>
             </a>
-          </div>
-
-         
-         
+            <div className="xp">
+            <Experience />
+            </div>
+          </div>     
         </div>
+  
         {/* right image side */}
         <div className='about-right'>
+
           <motion.img
             initial='hidden'
             animate='visible'

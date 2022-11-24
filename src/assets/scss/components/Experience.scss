@@ -2,10 +2,9 @@
   display: flex;
   justify-content: center;
   gap: 5rem;
-  margin-top: 12rem;
-  margin-bottom: 8rem;
+ 
   /* darkmode */
-  color: var(--black);
+  color:$black;
 }
 .achievement {
   display: flex;
@@ -30,18 +29,17 @@
 .circle::before {
   border-radius: 100%;
   content: "";
-  background-image: linear-gradient(to bottom, #87e6fb 0%, #ffc05c 100%);
+  background-image: linear-gradient(to bottom, $black 0%, $blue 100%);
   top: -8px;
   left: -8px;
   bottom: -8px;
   right: -8px;
   position: absolute;
   z-index: -1;
-  box-shadow: var(--boxShadow);
 }
 
 .achievement span:nth-of-type(2) {
-  color: var(--orange);
+  color: $black;
 }
 
 @media screen and (max-width: 480px) {

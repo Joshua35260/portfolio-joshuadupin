@@ -2,7 +2,7 @@
   height: auto;
   width: 360px;
   @include mobile {
-   transform: scale(0.9);
+   width: 320px;
   
   }
 
@@ -23,10 +23,14 @@
     overflow: hidden;
     position: relative;
 
+
     .header-image {
       transition: all 0.25s ;
       object-fit: cover;
-      
+      @include mobile {
+        height: 220px;
+       
+       }
       
     }
 
@@ -41,6 +45,10 @@
       background-color: #FFF;
       height: 280px;
       text-overflow: hidden;
+      @include mobile {
+        height: 260px;
+       
+       }
     }
 
     .card-name {

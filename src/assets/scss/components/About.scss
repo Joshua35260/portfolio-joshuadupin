@@ -1,5 +1,7 @@
 .about {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  
   padding: 100px 5vw 100px 5vw;
   @include tablet {
     padding: 80px 4vw 80px 4vw;
@@ -26,7 +28,15 @@
       font-size:28px
     }
   }
-
+.xp {
+  
+  @include mobiletablet {
+    position: relative;
+    top: -40px;
+    margin-top: 40px;
+ 
+  }
+}
 .about-in {
   display: flex;
   @include mobiletablet {
@@ -86,10 +96,14 @@
 .me {
   border-radius: 10px;
   position: relative;
-  @include tablet {
-    width: 400px
-  } @include mobile {
-    width: 300px
+  @media (max-width: 1280px) {
+    width: 350px;
+  }
+  @include laptop {
+    width: 300px;
+  }
+  @include mobiletablet {
+    width: 250px
   }
 }
 
