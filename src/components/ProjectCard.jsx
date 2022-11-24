@@ -9,7 +9,7 @@ export default class ProjectCard extends Component {
   }
 
   render() {
-    let { name, picture, info } = this.props.item
+    let { name, picture, info, url } = this.props.item
 
     return (
       <motion.div className='card'   initial='hidden'
@@ -23,18 +23,18 @@ export default class ProjectCard extends Component {
         <div className='card-header'>
           <img
             src={require(`../assets/img/${picture}`)}
-            width="370"
-            height="240"
+            width="380"
+            height="280"
             alt={name}
             className='header-image'
           ></img>
-          <div className='card-content'>
+          <div className='card-content' >
             <div className='card-name'>
               <h1>{name}</h1>
             </div>
             <div className='card-description'>{info}</div>
             <div className='card-footer'>
-              <Link to=''>Voir le site</Link>
+              <a href={url}>Voir le site</a>
             </div>
           </div>
         </div>
