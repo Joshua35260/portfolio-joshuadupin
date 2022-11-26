@@ -8,16 +8,16 @@ const ContactBar = () => {
     <nav className='contact-bar'>
       <div className='cbar-c'>
         <div className='cbar-1'>
-          <a href='https://www.linkedin.com/in/joshua-dupin/' target="_blank" rel="noreferrer">
+          <a href='https://www.linkedin.com/in/joshua-dupin/' aria-label="linkedin" target="_blank" rel="noreferrer">
             <Linkedin size='20' />
           </a>
-          <a href='https://github.com/Joshua35260' target="_blank" rel="noreferrer">
+          <a href='https://github.com/Joshua35260' aria-label="GitHub" target="_blank" rel="noreferrer">
             <GitHub size='20' />
           </a>
-          <a href='https://www.instagram.com/sunji_josh/?hl=fr' target="_blank" rel="noreferrer">
+          <a href='https://www.instagram.com/sunji_josh/?hl=fr' aria-label="Instagram" target="_blank" rel="noreferrer">
             <Instagram size='20' />
           </a>
-          <a href='https://www.facebook.com/SunjiDJosh' target="_blank" rel="noreferrer">
+          <a href='https://www.facebook.com/SunjiDJosh' aria-label="Facebook" target="_blank" rel="noreferrer">
             <Facebook size='20' />
           </a>
         </div>

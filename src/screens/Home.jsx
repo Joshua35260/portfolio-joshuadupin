@@ -1,4 +1,4 @@
-import { ChevronsUp } from 'react-feather';
+import { ChevronsUp } from 'react-feather'
 import { motion, useScroll, useSpring } from 'framer-motion'
 import { Link } from 'react-scroll'
 import ContactBar from '../components/ContactBar'
@@ -64,8 +64,6 @@ const Home = () => {
             fallback={require('../assets/img/jpeg/pfpaper11.jpeg')}
             alt='ordinateur portable, tablette et café'
             className='home-bg'
-            width='100%'
-            height='auto'
           ></ImgNextGen>
         </div>
         <ContactBar />
@@ -101,7 +99,7 @@ const Home = () => {
             })}
           </motion.h2>
 
-          <h4 className='intro-3'>FULLSTACK</h4>
+          <h3 className='intro-3'>FULLSTACK</h3>
           <motion.div
             className='intro-4'
             initial='hidden'

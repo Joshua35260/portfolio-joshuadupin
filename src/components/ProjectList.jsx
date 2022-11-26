@@ -43,6 +43,7 @@ export default class ProjectList extends Component {
         <div className='buttonDisplay'>
           {buttons.map(button => {
             return (
+              <ul>
               <li key={button.id}>
                 <input
                   type='button'
@@ -52,6 +53,7 @@ export default class ProjectList extends Component {
                   onClick={this.handleButton}
                 />
               </li>
+              </ul>
             )
           })}
         </div>
