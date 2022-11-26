@@ -1,10 +1,7 @@
-import Github from '../assets/img/github.png'
-import LinkedIn from '../assets/img/linkedin.png'
-import Instagram from '../assets/img/instagram.png'
-import me from '../assets/img/me.png'
 import Experience from './Experience'
 import { motion } from 'framer-motion'
 import CV from '../assets/CV.pdf'
+import ImgNextGen from './ImgNextGen'
 const About = () => {
   return (
     <section className='about'>
@@ -51,7 +48,8 @@ const About = () => {
         {/* right image side */}
         <div className='about-right'>
 
-          <motion.img
+          <motion.div
+            className='me'
             initial='hidden'
             animate='visible'
             viewport={{ once: false }}
@@ -61,12 +59,19 @@ const About = () => {
               visible: { opacity: 1},
               hidden: { opacity: 0,}
             }}
-            src={me}
-            alt=''
-            className='me'
+           
+          >
+        <ImgNextGen
+            srcWebp={require('../assets/img/webp/me.webp')}
+            fallback={require('../assets/img/jpeg/me.jpeg')}
+           
+            alt='Joshua'
+            className='header-image'
           />
+          </motion.div>
         </div>
       </div>
+
     </section>
   )
 }

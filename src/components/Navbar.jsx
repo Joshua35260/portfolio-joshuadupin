@@ -1,7 +1,7 @@
 import * as Icon from 'react-feather'
 import { Link } from 'react-scroll'
 import { useEffect, useState } from 'react'
-import iconHome from '../assets/img/home.svg'
+import iconHome from '../assets/img/svg/home.svg'
 
 const Navbar = () => {
   const [scroll, setScroll] = useState('relative')
