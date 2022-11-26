@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import * as Icon from 'react-feather'
+import { Linkedin, GitHub, Facebook, Instagram, Mail } from 'react-feather';
 import CV from '../assets/CV.pdf'
 
 const ContactBar = () => {
@@ -9,16 +9,16 @@ const ContactBar = () => {
       <div className='cbar-c'>
         <div className='cbar-1'>
           <a href='https://www.linkedin.com/in/joshua-dupin/' target="_blank" rel="noreferrer">
-            <Icon.Linkedin size='20' />
+            <Linkedin size='20' />
           </a>
           <a href='https://github.com/Joshua35260' target="_blank" rel="noreferrer">
-            <Icon.GitHub size='20' />
+            <GitHub size='20' />
           </a>
           <a href='https://www.instagram.com/sunji_josh/?hl=fr' target="_blank" rel="noreferrer">
-            <Icon.Instagram size='20' />
+            <Instagram size='20' />
           </a>
           <a href='https://www.facebook.com/SunjiDJosh' target="_blank" rel="noreferrer">
-            <Icon.Facebook size='20' />
+            <Facebook size='20' />
           </a>
         </div>
 
@@ -27,7 +27,7 @@ const ContactBar = () => {
         </a>
         <div className='cbar-3'>
           <a href='mailto:joshua35260@gmail.com'>
-            <Icon.Mail size='14' className='mailIcon' />
+            <Mail size='14' className='mailIcon' />
             joshua35260@gmail.com
           </a>
         </div>

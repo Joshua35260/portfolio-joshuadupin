@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-scroll'
-import * as Icon from 'react-feather'
+import { ChevronUp, Menu } from 'react-feather';
 import { motion } from 'framer-motion'
 
 const MobileNav = () => {
@@ -18,14 +18,14 @@ const MobileNav = () => {
         <div className='arrow-up-c'>
           <span className='arrow-up'>
             <Link to='home' spy={true} smooth={true}>
-              <Icon.ChevronUp color='white' size='26' />
+              <ChevronUp color='white' size='26' />
             </Link>
           </span>
         </div>
 
         <div className='burger-c'>
           <span className='burger' onClick={handleToggle}>
-            <Icon.Menu color='white' size='24' />
+            <Menu color='white' size='24' />
           </span>
         </div>
       </div>

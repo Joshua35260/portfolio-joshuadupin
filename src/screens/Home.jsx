@@ -1,4 +1,4 @@
-import * as Icon from 'react-feather'
+import { ChevronsUp } from 'react-feather';
 import { motion, useScroll, useSpring } from 'framer-motion'
 import { Link } from 'react-scroll'
 import ContactBar from '../components/ContactBar'
@@ -128,7 +128,7 @@ const Home = () => {
               }}
             >
               <Link to='skills' spy={true} smooth={true}>
-                <Icon.ChevronsUp color='white' size='64' />
+                <ChevronsUp color='white' size='64' />
               </Link>
             </motion.span>
           </motion.div>
