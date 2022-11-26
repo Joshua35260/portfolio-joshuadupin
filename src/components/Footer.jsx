@@ -8,13 +8,19 @@ const Footer = () => {
         <div className='contact-bar2'>
       <div className='cbar-c'>
         <div className='cbar-link'>
-          <Link to='https://www.linkedin.com/in/joshua-dupin/'><Icon.Linkedin size='16' /></Link>
-          <Link to='https://github.com/Joshua35260'><Icon.GitHub size='16' /></Link>
-          <Link to='https://www.instagram.com/sunji_josh/?hl=fr'><Icon.Instagram size='16' /></Link>
-          <Link to='https://www.facebook.com/SunjiDJosh'><Icon.Facebook size='16' /></Link>
+          <a href='https://www.linkedin.com/in/joshua-dupin/' target="_blank" rel="noreferrer"><Icon.Linkedin size='16' /></a>
+          <a href='https://github.com/Joshua35260' target="_blank" rel="noreferrer">
+            <Icon.GitHub size='16' />
+          </a>
+          <a href='https://www.instagram.com/sunji_josh/?hl=fr' target="_blank" rel="noreferrer">
+            <Icon.Instagram size='16' />
+          </a>
+          <a href='https://www.facebook.com/SunjiDJosh' target="_blank" rel="noreferrer">
+            <Icon.Facebook size='16' />
+          </a>
         </div>
      
-        <div className='foot-credits'><span>©</span>joshuadupin.me</div>
+        <div className='foot-credits'><a href="/"><span>©</span>joshuadupin.me</a></div>
        
         <a href={CV} download onClick={CV}>
           Télécharger mon CV
