@@ -24,11 +24,9 @@
     overflow: hidden;
 
     .home-bg {
- 
       position: relative;
       filter: brightness(60%);
       opacity: 100%;
-      width: 100%;
       animation: shrink 12s infinite alternate;
       object-fit: cover;
 

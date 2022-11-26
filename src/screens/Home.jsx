@@ -60,13 +60,15 @@ const Home = () => {
 
       <section className='home'>
         <div className='home-background'>
-          <LazyLoad >
           <ImgNextGen
             srcWebp={require('../assets/img/webp/pfpaper11.webp')}
             fallback={require('../assets/img/jpeg/pfpaper11.jpeg')}
             alt='ordinateur portable, tablette et café'
             className='home-bg'
-          ></ImgNextGen> </LazyLoad>
+            width='100%'
+            height='auto'
+
+          ></ImgNextGen>
         </div>
         <ContactBar />
         <Navbar />

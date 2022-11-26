@@ -13,7 +13,9 @@ const Skills = () => {
             srcWebp={require('../assets/img/webp/map.webp')}
             fallback={require('../assets/img/png/map.png')}
             alt='map monde'
-            className='map'>
+            className='map'
+            height='auto'
+            width='100%'>
             </ImgNextGen>
             </LazyLoad>
             </div>
