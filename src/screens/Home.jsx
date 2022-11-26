@@ -63,8 +63,8 @@ const Home = () => {
         </div>
         <ContactBar />
         <Navbar />
-        <div className='intro-c'>
-          <motion.div
+        <article className='intro-c'>
+          <motion.h1
             className='intro-1'
             initial='hidden'
             animate='visible'
@@ -77,9 +77,9 @@ const Home = () => {
                 </motion.span>
               )
             })}
-          </motion.div>
+          </motion.h1>
 
-          <motion.div
+          <motion.h2
             className='intro-2'
             variants={sentence}
             initial='hidden'
@@ -92,9 +92,9 @@ const Home = () => {
                 </motion.span>
               )
             })}
-          </motion.div>
+          </motion.h2>
 
-          <div className='intro-3'>FULLSTACK</div>
+          <h4 className='intro-3'>FULLSTACK</h4>
           <motion.div
             className='intro-4'
             initial='hidden'
@@ -125,7 +125,7 @@ const Home = () => {
               </Link>
             </motion.span>
           </motion.div>
-        </div>
+        </article>
       </section>
       <Skills />
       <ProjectList />

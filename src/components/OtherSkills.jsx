@@ -4,7 +4,7 @@ import * as Icon from 'react-feather'
 
 const OtherSkills = () => {
   return (
-    <motion.div
+    <motion.article
       initial='hidden'
       whileInView='visible'
       viewport={{ once: true }}
@@ -89,7 +89,7 @@ const OtherSkills = () => {
           </li>
         </ul>
       </div>
-    </motion.div>
+    </motion.article>
   )
 }
 

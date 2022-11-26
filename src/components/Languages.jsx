@@ -15,13 +15,13 @@ class Languages extends Component {
     let { languages } = this.state
 
     return (
-      <div className='languagesFrameworks'>
+      <article className='languagesFrameworks'>
         <ProgressBar
           languages={languages}
           className='languagesDisplay'
           title='Languages, frameworks & bibliothèques'
         />
-      </div>
+      </article>
     )
   }
 }
