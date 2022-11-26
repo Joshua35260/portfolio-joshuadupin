@@ -11,6 +11,7 @@ import Contact from '../components/Contact'
 import MobileNav from '../components/MobileNav'
 import About from '../components/About'
 import ImgNextGen from '../components/ImgNextGen'
+import LazyLoad from 'react-lazy-load'
 
 const Home = () => {
   const { scrollYProgress } = useScroll()
@@ -59,12 +60,13 @@ const Home = () => {
 
       <section className='home'>
         <div className='home-background'>
+          <LazyLoad >
           <ImgNextGen
             srcWebp={require('../assets/img/webp/pfpaper11.webp')}
             fallback={require('../assets/img/jpeg/pfpaper11.jpeg')}
             alt='ordinateur portable, tablette et café'
             className='home-bg'
-          ></ImgNextGen>
+          ></ImgNextGen> </LazyLoad>
         </div>
         <ContactBar />
         <Navbar />

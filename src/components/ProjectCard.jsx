@@ -2,6 +2,7 @@ import { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import ImgNextGen from './ImgNextGen'
+import LazyLoad from 'react-lazy-load'
 export default class ProjectCard extends Component {
   handleRadio = event => {
     let radio = event.target.value
@@ -24,15 +25,16 @@ export default class ProjectCard extends Component {
         }}
       >
         <div className='card-header'>
+        <LazyLoad >
           <ImgNextGen
             srcWebp={require(`../assets/img/webp/${picture}`)}
             fallback={require(`../assets/img/jpeg/${picture2}`)}
-            width='380'
-            height='280'
+            width='100%'
+            height='auto'
             alt={name}
             className='header-image'
           />
-  
+ </LazyLoad>
           <div className='card-content'>
             <div className='card-name'>
               <h1>{name}</h1>
