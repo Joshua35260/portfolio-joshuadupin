@@ -5,7 +5,7 @@ const ImgNextGen = ({ srcWebp, fallback, alt, ...props }) => {
     <picture>
       <source srcset={srcWebp} type='image/webp' />
       <source srcset={fallback} type='image/jpeg' />
-      <img src={fallback} alt={alt} {...props} width='100%' height='auto' />
+      <img src={fallback} alt={alt} {...props} width='100%' height='auto' loading="lazy" />
     </picture>
   )
 }
