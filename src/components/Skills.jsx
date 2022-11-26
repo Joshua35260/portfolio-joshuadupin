@@ -1,13 +1,19 @@
 import Languages from './Languages'
 import OtherSkills from './OtherSkills'
-import map from '../assets/img/map.webp'
-import '../assets/scss/base/responsive.scss'
 import { motion } from 'framer-motion'
+import ImgNextGen from './ImgNextGen'
 const Skills = () => {
   return (
     <>
       <section className='skills'>
-        <img src={map} alt='map monde' className='map'></img>
+      <div className="skills-imgc">
+          <ImgNextGen
+            srcWebp={require('../assets/img/webp/map.webp')}
+            fallback={require('../assets/img/png/map.png')}
+            alt='map monde'
+            className='map'>
+            </ImgNextGen>
+            </div>
         <motion.h1
           className='skills-h1'
           initial='hidden'

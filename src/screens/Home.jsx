@@ -4,13 +4,13 @@ import { Link } from 'react-scroll'
 import ContactBar from '../components/ContactBar'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import homeBackground from '../assets/img/pfpaper11.webp'
+import homeBackground from '../assets/img/webp/pfpaper11.webp'
 import Skills from '../components/Skills'
 import ProjectList from '../components/ProjectList'
 import Contact from '../components/Contact'
 import MobileNav from '../components/MobileNav'
 import About from '../components/About'
-
+import ImgNextGen from '../components/ImgNextGen'
 
 const Home = () => {
   const { scrollYProgress } = useScroll()
@@ -59,7 +59,12 @@ const Home = () => {
 
       <section className='home'>
         <div className='home-background'>
-          <img src={homeBackground} alt='' className='home-bg'></img>
+          <ImgNextGen
+            srcWebp={require('../assets/img/webp/pfpaper11.webp')}
+            fallback={require('../assets/img/jpeg/pfpaper11.jpeg')}
+            alt='ordinateur portable, tablette et café'
+            className='home-bg'
+          ></ImgNextGen>
         </div>
         <ContactBar />
         <Navbar />
