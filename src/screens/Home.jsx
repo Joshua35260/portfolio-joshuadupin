@@ -64,6 +64,8 @@ const Home = () => {
             fallback={require('../assets/img/jpeg/pfpaper11.jpeg')}
             alt='ordinateur portable, tablette et café'
             className='home-bg'
+            width='100%'
+            height='auto'
           ></ImgNextGen>
         </div>
         <ContactBar />
