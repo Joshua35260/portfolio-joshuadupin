@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 const Skills = () => {
   return (
     <>
-      <div className='skills'>
+      <section className='skills'>
         <img src={map} alt='map monde' className='map'></img>
         <motion.h1
           className='skills-h1'
@@ -25,7 +25,7 @@ const Skills = () => {
           <Languages />
           <OtherSkills />
         </div>
-      </div>
+      </section>
     </>
   )
 }

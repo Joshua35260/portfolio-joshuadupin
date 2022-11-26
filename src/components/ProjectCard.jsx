@@ -34,7 +34,7 @@ export default class ProjectCard extends Component {
             </div>
             <div className='card-description'>{info}</div>
             <div className='card-footer'>
-              <a href={url}>Voir le site</a>
+              <a href={url} target="_blank" rel="noreferrer">Voir le site</a>
             </div>
           </div>
         </div>

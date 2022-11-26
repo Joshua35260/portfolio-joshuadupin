@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 const ProgressBar = props => {
   return (
     <div className={props.ClassName}>
-      <h3>{props.title}</h3>
+      <h2>{props.title}</h2>
       <div className='years'>
         <span>Expérience</span>
         <span>1 an</span>

@@ -8,18 +8,18 @@ const ContactBar = () => {
     <nav className='contact-bar'>
       <div className='cbar-c'>
         <div className='cbar-1'>
-          <NavLink to='https://www.linkedin.com/in/joshua-dupin/'>
+          <a href='https://www.linkedin.com/in/joshua-dupin/' target="_blank" rel="noreferrer">
             <Icon.Linkedin size='20' />
-          </NavLink>
-          <NavLink to='https://github.com/Joshua35260'>
+          </a>
+          <a href='https://github.com/Joshua35260' target="_blank" rel="noreferrer">
             <Icon.GitHub size='20' />
-          </NavLink>
-          <NavLink to='https://www.instagram.com/sunji_josh/?hl=fr'>
+          </a>
+          <a href='https://www.instagram.com/sunji_josh/?hl=fr' target="_blank" rel="noreferrer">
             <Icon.Instagram size='20' />
-          </NavLink>
-          <NavLink to='https://www.facebook.com/SunjiDJosh'>
+          </a>
+          <a href='https://www.facebook.com/SunjiDJosh' target="_blank" rel="noreferrer">
             <Icon.Facebook size='20' />
-          </NavLink>
+          </a>
         </div>
 
         <a href={CV} download onClick={CV}>
