@@ -29,14 +29,10 @@
     }
   }
 .xp {
-  
-  @include mobiletablet {
-    position: relative;
-    top: -40px;
-    margin-top: 40px;
- 
+  display: flex;
+  justify-content: center;
   }
-}
+
 .about-in {
   display: flex;
   @include mobiletablet {
@@ -95,23 +91,16 @@
 }
 .me {
   border-radius: 10px;
-  position: relative;
-  @media (max-width: 1280px) {
-    width: 350px;
-  }
-  @include laptop {
-    width: 300px;
-  }
-  @include mobiletablet {
-    width: 250px
-  }
+  display: flex;
+  justify-content: center;
+
+
 }
 
 .about-right {
   width: 30%;
   @include mobiletablet {
     display: flex;
-
     justify-content: center;
     width: 100%;
   

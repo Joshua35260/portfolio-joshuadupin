@@ -64,9 +64,9 @@ const About = () => {
         <ImgNextGen
             srcWebp={require('../assets/img/webp/me.webp')}
             fallback={require('../assets/img/jpeg/me.jpeg')}
-           
             alt='Joshua'
-            className='header-image'
+            width='100%'
+            height='auto'
           />
           </motion.div>
         </div>
