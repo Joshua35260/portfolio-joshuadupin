@@ -90,11 +90,11 @@
   }
 }
 .me {
-  border-radius: 10px;
   display: flex;
   justify-content: center;
-
-
+  img {
+    border-radius: 10px;
+  }
 }
 
 .about-right {
