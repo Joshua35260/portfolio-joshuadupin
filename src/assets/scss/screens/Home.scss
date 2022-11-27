@@ -26,6 +26,8 @@
     .home-bg {
       position: relative;
       filter: brightness(60%);
+      height: 100vh;
+      width: 100vw;
       opacity: 100%;
       animation: shrink 12s infinite alternate;
       object-fit: cover;
