@@ -3,6 +3,7 @@
   flex-direction: column;
   padding: 100px 12vw;
   text-align: center;
+  align-items: center;
   background-color: rgb(50, 50, 50);
   
   @include mobiletablet {

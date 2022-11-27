@@ -29,7 +29,7 @@ export default class ProjectCard extends Component {
           <ImgNextGen
             srcWebp={require(`../assets/img/webp/${picture}`)}
             fallback={require(`../assets/img/jpeg/${picture2}`)}
-            width='100%'
+            width='130%'
             height='auto'
             alt={name}
             className='header-image'

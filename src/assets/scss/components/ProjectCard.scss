@@ -27,11 +27,7 @@
     .header-image {
       transition: all 0.25s ;
       object-fit: cover;
-      @include mobile {
-        height: 220px;
-       
-       }
-      
+      height: 220px;   
     }
 
     .header-image:hover {
