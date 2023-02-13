@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Card from './ProjectCard'
-import { portfolioData } from '../assets/data/portfolioData'
 const ProjectListclass = (projects, buttons, selectedButton) => {
 
   const [value, setValue] = useState()

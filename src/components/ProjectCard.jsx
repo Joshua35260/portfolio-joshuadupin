@@ -1,9 +1,9 @@
 import { Component } from 'react'
-import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import ImgNextGen from './ImgNextGen'
 import LazyLoad from 'react-lazy-load'
 export default class ProjectCard extends Component {
+  
   handleRadio = event => {
     let radio = event.target.value
     this.setState({ selectedRadio: radio })

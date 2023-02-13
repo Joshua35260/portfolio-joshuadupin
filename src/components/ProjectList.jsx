@@ -12,7 +12,7 @@ export default class ProjectList extends Component {
       { id: 3, value: 'Node.JS' },
       { id: 4, value: 'Javascript' },
       { id: 5, value: 'PHP' },
-      { id: 6, value: 'C#' }
+      { id: 6, value: 'Autres' }
     ],
     selectedButton: 'Tous'
   }
