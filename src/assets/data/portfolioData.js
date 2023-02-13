@@ -26,7 +26,6 @@ export const portfolioData = [
     picture2: 'project2.jpeg',
     url: "https://rock-your-band.netlify.app/"
   },
- 
   {
     id: 4,
     name: 'UX/UI E-commerce',
