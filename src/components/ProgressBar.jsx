@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
+
 const ProgressBar = props => {
   return (
     <div className={props.ClassName}>
