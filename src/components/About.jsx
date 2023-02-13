@@ -24,15 +24,13 @@ const About = () => {
             <h3>Joshua DUPIN</h3>
             <p>Hello world !</p>
             <p>
-              Développeur fullstack actuellement en stage, je recherche
-              activement un poste ou une alternance d'un an au rythme de 2
-              semaines en entreprise / 1 semaine en centre à partir de Mars
-              2023.
+              Développeur fullstack actuellement en alternance, ayant une préférence pour le front.<br />
+              [Angular, React, Typescript, Express, JAVA]
             </p>
             <p>
               Polyvalent, déterminé et autodidacte, je suis une personne
-              curieuse et passionnée. J'apprécie beaucoup le travail avec
-              bienveillance, sérieux mais aussi avec humour !
+              curieuse et passionnée. <br />
+              J'apprécie beaucoup le travail avec bienveillance, sérieux mais aussi et surtout avec humour !
             </p>
             <a href={CV} download>
               <button className='button s-button' onClick={CV}>
