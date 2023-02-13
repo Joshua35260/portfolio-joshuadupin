@@ -5,13 +5,14 @@
   text-align: center;
   align-items: center;
   background-color: rgb(50, 50, 50);
-  
+ 
   @include mobiletablet {
     padding: 80px 20px
   }
-  @include mobile {
-    padding: 60px 10px
+  @media (max-width:374px) {
+    padding: 60px 20px
   }
+
   
   h1 {
     font-family: 'Montserrat';
@@ -62,12 +63,13 @@
 
 .buttonDisplay {
   display: flex;
-  
-  margin-inline: auto;
+  flex-wrap: wrap;
+  max-width: 100%;
   margin-bottom: 60px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 2px 3px 4px  black;
+  // @include mobile {width: 320px}
 
  li:first-child {
   .buttonProject {
@@ -99,9 +101,12 @@
       font-size: 14px;
     }
     @include mobile {
-      padding: 5.5px 11px;
-      
-      font-size: 12px;
+      padding: 5px 10px;
+      font-size: 11px;
+    }
+    @media (max-width:374px) {
+      padding: 5px;
+      font-size: 11px;
     }
   }
 
