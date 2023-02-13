@@ -6,9 +6,9 @@ class Languages extends Component {
       { id: 1, value: 'HTML', xp: 1.5 },
       { id: 2, value: 'CSS', xp: 1.5 },
       { id: 3, value: 'Javascript', xp: 1.2 },
-      { id: 4, value: 'ReactJS', xp: 1 },
+      { id: 4, value: 'React', xp: 1 },
       { id: 5, value: 'Angular', xp: 0.2},
-      { id: 6, value: 'ExpressJS', xp: 0.8 },
+      { id: 6, value: 'Express', xp: 0.8 },
       { id: 7, value: 'JAVA', xp: 0.1},
     ]
     
