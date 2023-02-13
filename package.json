@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "@emailjs/browser": "^3.9.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -23,6 +24,14 @@
     "react-spring": "^9.5.5",
     "sass": "^1.55.0",
     "styled-components": "^5.3.6",
+=======
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+>>>>>>> 4a9d584 (Initialize project using Create React App)
     "web-vitals": "^2.1.0"
   },
   "scripts": {
@@ -48,9 +57,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+<<<<<<< HEAD
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint-config-prettier": "^8.5.0"
+=======
+>>>>>>> 4a9d584 (Initialize project using Create React App)
   }
 }
