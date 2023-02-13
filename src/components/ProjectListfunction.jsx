@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Card from './ProjectCard'
-const ProjectListclass = (projects, buttons, selectedButton) => {
+const ProjectListclass = (projects, selectedButton) => {
 
   const [value, setValue] = useState()
 
