@@ -34,9 +34,7 @@ const Footer = () => {
             <h1>Développeur Web Fullstack</h1>
             <p className='foot-desc-p'>
             Je suis passioné par le code avec une tendance à m'orienter vers le Front-End.
-            Actuellement en stage, je suis à la recherche d'un poste en CDI ou
-            bien une alternance afin de préparer le titre "Concepteur
-            Développeur".
+            Actuellement en alternance Java/Angular pour préparer le titre CDA.
             </p>
           </div>
         </div>
