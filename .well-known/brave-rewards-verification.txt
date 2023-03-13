@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: joshuadupin.me
+Token: c546765cefb6ccc566d5b2d4cada655c7a41b33f40b769075b586faf42a83dad
